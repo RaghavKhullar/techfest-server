@@ -12,9 +12,15 @@ Clone the repo to your device.
 yarn install
 ```
 
+3. Install the githooks:
+
+```bash
+yarn prepare
+```
+
 ## Setup
 
-3. Copy and <b>Configure</b> the [.example.env](https://github.com/RaghavKhullar/techfest-server/blob/main/.env.example ".example.env") then rename it as `.env`, then it should look like
+4. Copy and <b>Configure</b> the [.example.env](https://github.com/RaghavKhullar/techfest-server/blob/main/.env.example ".example.env") then rename it as `.env`, then it should look like
 
 ```environment
 ENV=DEV
@@ -26,7 +32,7 @@ GOOGLE_REDIRECT_URI=
 ....
 ```
 
-4. Copy and <b>Configure</b> the [config.example.ts](https://github.com/RaghavKhullar/techfest-server/blob/main/config/config.example.ts "config.example.ts") then rename it as `config.ts`, then it should look like
+5. Copy and <b>Configure</b> the [config.example.ts](https://github.com/RaghavKhullar/techfest-server/blob/main/config/config.example.ts "config.example.ts") then rename it as `config.ts`, then it should look like
 
 ```typescript
 const config = {
@@ -37,7 +43,7 @@ const config = {
 export default config;
 ```
 
-5. Start the server in development mode:
+6. Start the server in development mode:
 
 ```bash
 yarn run dev

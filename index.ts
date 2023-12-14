@@ -9,10 +9,9 @@ import morgan from "morgan";
 connectDatabase(config.db);
 const app = express();
 
-
 app.use(express.json());
 app.use(
-    morgan(":method :url :status :res[content-length] - :response-time ms"),
+    morgan(":method :url :status :res[content-length] - :response-time ms")
 );
 
 app.listen(config.port, () => {

@@ -1,8 +1,9 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document, Types } from "mongoose";
 
 interface UserInterface extends Document {
     name: string;
     email: string;
+    allotedTasks: Array<Types.ObjectId>;
 }
 
 const UserSchema = new Schema<UserInterface>({
@@ -13,6 +14,11 @@ const UserSchema = new Schema<UserInterface>({
     email: {
         type: String,
         default: "",
+    },
+    allotedTasks: {
+        type: [Types.ObjectId],
+        default: [],
+        ref: "TaskModel",
     },
 });
 

@@ -18,45 +18,30 @@ export const userLogin = async (req: any, res: any) => {
             isAdmin: false,
         });
         if (!checkUserExist) {
-            return res
-                .status(400)
-                .json({
-                    message:
-                        "You are not authorised to access the website. Contact the admin to allow",
-                });
+            return res.status(400).json({
+                message:
+                    "You are not authorised to access the website. Contact the admin to allow",
+            });
         }
 
-        const currentUser = await UserModel.findOne({
-            email: userDetails.email,
-        });
-        if (!currentUser) {
-            const newUser = await UserModel.create({
+        const currentUser = await UserModel.findOneAndUpdate(
+            {
                 email: userDetails.email,
-                name: userDetails.name,
-            });
-            await newUser.save();
-            res.cookie(
-                "token",
-                signToken(userDetails.email, newUser._id, false),
-                {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: "none",
-                    path: "/",
-                }
-            );
-        } else {
-            res.cookie(
-                "token",
-                signToken(userDetails.email, currentUser._id, false),
-                {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: "none",
-                    path: "/",
-                }
-            );
-        }
+            },
+            { email: userDetails.email, name: userDetails.name },
+            { new: true, upsert: true }
+        );
+
+        res.cookie(
+            "token",
+            signToken(userDetails.email, currentUser._id, false),
+            {
+                httpOnly: true,
+                secure: true,
+                sameSite: "none",
+                path: "/",
+            }
+        );
 
         return res.redirect(`${process.env.FRONTEND_URL}/home`);
     } catch (err: any) {
@@ -81,7 +66,7 @@ export const adminLogin = async (req: any, res: any) => {
     try {
         const { id_token, access_token } = await getTokensGoogle(code, true);
         if (id_token === undefined || access_token === undefined) {
-            return res.redirect(`${process.env.FRONTEND_URL}/login`);
+            return res.redirect(`${process.env.FRONTEND_URL}/admin/login`);
         }
 
         const adminDetails = await getGoogleUser(id_token, access_token);
@@ -90,55 +75,40 @@ export const adminLogin = async (req: any, res: any) => {
             isAdmin: true,
         });
         if (!checkAdminExist) {
-            return res
-                .status(400)
-                .json({
-                    message:
-                        "You are not authorised to access the website. Contact the admin to allow",
-                });
-        }
-
-        const currentAdmin = await AdminModel.findOne({
-            email: adminDetails.email,
-        });
-        if (!currentAdmin) {
-            const newAdmin = await AdminModel.create({
-                email: adminDetails.email,
-                name: adminDetails.name,
+            return res.status(400).json({
+                message:
+                    "You are not authorised to access the website. Contact the admin to allow",
             });
-            await newAdmin.save();
-            res.cookie(
-                "idToken",
-                signToken(adminDetails.email, newAdmin._id, true),
-                {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: "none",
-                    path: "/",
-                }
-            );
-        } else {
-            res.cookie(
-                "idToken",
-                signToken(adminDetails.email, currentAdmin._id, true),
-                {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: "none",
-                    path: "/",
-                }
-            );
         }
 
-        return res.redirect(`${process.env.FRONTEND_URL}/home`);
+        const currentAdmin = await AdminModel.findOneAndUpdate(
+            {
+                email: adminDetails.email,
+            },
+            { email: adminDetails.email, name: adminDetails.name },
+            { new: true, upsert: true }
+        );
+
+        res.cookie(
+            "idToken",
+            signToken(adminDetails.email, currentAdmin._id, true),
+            {
+                httpOnly: true,
+                secure: true,
+                sameSite: "none",
+                path: "/",
+            }
+        );
+
+        return res.redirect(`${process.env.FRONTEND_URL}/admin/home`);
     } catch (err: any) {
-        return res.redirect(`${process.env.FRONTEND_URL}/login`);
+        return res.redirect(`${process.env.FRONTEND_URL}/admin/login`);
     }
 };
 
 export const adminLogout = (req: any, res: any) => {
     return res
-        .cookie("token", "", {
+        .cookie("idToken", "", {
             httpOnly: true,
             secure: true,
             sameSite: "none",

@@ -8,7 +8,7 @@ export const authenticateUserToken = (req: any, res: any, next: any) => {
     }
 
     verify(token, process.env.JWT_SECRET as string, (err: any, user: any) => {
-        if (err || (user && (!user.email || user.isAdmin))) {
+        if (err || (user && (!user.email || user.isAdmin || !user.id))) {
             return res
                 .cookie("token", "", {
                     httpOnly: true,
@@ -18,7 +18,7 @@ export const authenticateUserToken = (req: any, res: any, next: any) => {
                 })
                 .redirect(`${process.env.FRONTEND_URL}/login`);
         }
-        req.userEmail = user.email;
+        req.userId = user.id;
         next();
     });
 };
@@ -31,7 +31,7 @@ export const authenticateTokenAdmin = (req: any, res: any, next: any) => {
     }
 
     verify(token, process.env.JWT_SECRET as string, (err: any, admin: any) => {
-        if (err || (admin && (!admin.email || !admin.isAdmin))) {
+        if (err || (admin && (!admin.email || !admin.isAdmin || !admin.id))) {
             return res
                 .cookie("idToken", "", {
                     httpOnly: true,
@@ -41,7 +41,7 @@ export const authenticateTokenAdmin = (req: any, res: any, next: any) => {
                 })
                 .redirect(`${process.env.FRONTEND_URL}/login`);
         }
-        req.adminEmail = admin.email;
+        req.adminId = admin.id;
         next();
     });
 };

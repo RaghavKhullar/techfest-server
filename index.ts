@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config({
     path: __dirname.replace("build", ".env"),
 });
+import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDatabase from "./utils/connectDatabase";
@@ -13,6 +14,14 @@ import adminRouter from "./routes/admin.routes";
 
 connectDatabase(config.db);
 const app = express();
+
+// Neccessary Middlewares
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+);
 app.use(
     cors({
         origin: ["http://localhost:3000", process.env.FRONTEND_URL as string],

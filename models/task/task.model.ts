@@ -4,6 +4,7 @@ interface TaskInterface extends Document {
     name: string;
     allotedUsers: Array<Types.ObjectId>;
     deadline: Date;
+    childTasks: Array<Types.ObjectId>;
 }
 
 const TaskSchema = new Schema<TaskInterface>(
@@ -20,6 +21,11 @@ const TaskSchema = new Schema<TaskInterface>(
         deadline: {
             type: Date,
             default: null,
+        },
+        childTasks: {
+            type: [Types.ObjectId],
+            default: [],
+            ref: "TaskModel",
         },
     },
     { timestamps: true }

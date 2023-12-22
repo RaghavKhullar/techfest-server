@@ -11,6 +11,7 @@ import config from "./config/config";
 import morgan from "morgan";
 import userRouter from "./routes/user.routes";
 import adminRouter from "./routes/admin.routes";
+import fs from "fs";
 
 connectDatabase(config.db);
 const app = express();
@@ -28,6 +29,26 @@ app.use(
         credentials: true,
     })
 );
+
+// Sending profile pictures stored in server
+app.get("/documents/files/*", (req: any, res: any) => {
+    try {
+        if (fs.existsSync("./storage/documents/" + req.params["0"])) {
+            return res.sendFile("storage/documents/" + req.params["0"], {
+                root: __dirname + "/../",
+            });
+        } else {
+            return res.sendFile("storage/dummy.pdf", {
+                root: __dirname + "/../",
+            });
+        }
+    } catch (e) {
+        console.error(e);
+        return res
+            .status(500)
+            .send({ message: "Error while fetching the pdf" });
+    }
+});
 app.use(express.json());
 app.use(
     morgan(":method :url :status :res[content-length] - :response-time ms")

@@ -9,8 +9,8 @@ export const getTokensGoogle = async (code: string, isAdmin: boolean) => {
             client_id: process.env.GOOGLE_CLIENT_ID as string,
             client_secret: process.env.GOOGLE_CLIENT_SECRET as string,
             redirect_uri: isAdmin
-                ? (process.env.GOOGLE_ADMIN_REDIRECT_URL as string)
-                : (process.env.GOOGLE_USER_REDIRECT_URL as string),
+                ? (process.env.GOOGLE_ADMIN_REDIRECT_URI as string)
+                : (process.env.GOOGLE_USER_REDIRECT_URI as string),
             grant_type: "authorization_code",
         };
 

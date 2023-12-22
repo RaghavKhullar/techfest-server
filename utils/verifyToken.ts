@@ -1,4 +1,5 @@
 import { verify } from "jsonwebtoken";
+import { isValidObjectId } from "mongoose";
 
 export const authenticateUserToken = (req: any, res: any, next: any) => {
     const token = req.cookies?.token;
@@ -8,7 +9,10 @@ export const authenticateUserToken = (req: any, res: any, next: any) => {
     }
 
     verify(token, process.env.JWT_SECRET as string, (err: any, user: any) => {
-        if (err || (user && (!user.email || user.isAdmin || !user.id))) {
+        if (
+            err ||
+            (user && (!user.email || user.isAdmin || !isValidObjectId(user.id)))
+        ) {
             return res
                 .cookie("token", "", {
                     httpOnly: true,
@@ -31,7 +35,11 @@ export const authenticateTokenAdmin = (req: any, res: any, next: any) => {
     }
 
     verify(token, process.env.JWT_SECRET as string, (err: any, admin: any) => {
-        if (err || (admin && (!admin.email || !admin.isAdmin || !admin.id))) {
+        if (
+            err ||
+            (admin &&
+                (!admin.email || !admin.isAdmin || !isValidObjectId(admin.id)))
+        ) {
             return res
                 .cookie("idToken", "", {
                     httpOnly: true,

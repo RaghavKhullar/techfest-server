@@ -4,6 +4,7 @@ interface UserInterface extends Document {
     name: string;
     email: string;
     allotedTasks: Array<Types.ObjectId>;
+    image: string;
 }
 
 const UserSchema = new Schema<UserInterface>({
@@ -18,7 +19,11 @@ const UserSchema = new Schema<UserInterface>({
     allotedTasks: {
         type: [Types.ObjectId],
         default: [],
-        ref: "TaskModel",
+        ref: "SubtaskModel",
+    },
+    image: {
+        type: String,
+        default: "",
     },
 });
 

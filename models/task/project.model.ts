@@ -1,27 +1,16 @@
 import { Schema, model, Document, Types } from "mongoose";
+import { priorityMap, statusMap } from "./task.model";
 
-interface TaskInterface extends Document {
+interface ProjectInterface extends Document {
     name: string;
     deadline: Date;
     childTasks: Array<Types.ObjectId>;
-    description: string;
     status: string;
+    description: string;
     priority: number;
 }
 
-export const statusMap = {
-    DUE: "due",
-    PROGRESS: "progress",
-    COMPLETE: "complete",
-};
-
-export const priorityMap = {
-    LOW: 0,
-    MEDIUM: 1,
-    HIGH: 2,
-};
-
-const TaskSchema = new Schema<TaskInterface>(
+const ProjectSchema = new Schema<ProjectInterface>(
     {
         name: {
             type: String,
@@ -34,7 +23,7 @@ const TaskSchema = new Schema<TaskInterface>(
         childTasks: {
             type: [Types.ObjectId],
             default: [],
-            ref: "SubtaskModel",
+            ref: "TaskModel",
         },
         status: {
             type: String,
@@ -52,6 +41,6 @@ const TaskSchema = new Schema<TaskInterface>(
     { timestamps: true }
 );
 
-const TaskModel = model<TaskInterface>("TaskModel", TaskSchema);
+const ProjectModel = model<ProjectInterface>("ProjectModel", ProjectSchema);
 
-export default TaskModel;
+export default ProjectModel;

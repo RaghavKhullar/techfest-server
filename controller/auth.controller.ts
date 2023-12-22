@@ -66,7 +66,7 @@ export const adminLogin = async (req: any, res: any) => {
     try {
         const { id_token, access_token } = await getTokensGoogle(code, true);
         if (id_token === undefined || access_token === undefined) {
-            return res.redirect(`${process.env.FRONTEND_URL}/admin/login`);
+            return res.redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const adminDetails = await getGoogleUser(id_token, access_token);
@@ -99,10 +99,9 @@ export const adminLogin = async (req: any, res: any) => {
                 path: "/",
             }
         );
-
         return res.redirect(`${process.env.FRONTEND_URL}/admin/home`);
     } catch (err: any) {
-        return res.redirect(`${process.env.FRONTEND_URL}/admin/login`);
+        return res.redirect(`${process.env.FRONTEND_URL}/login`);
     }
 };
 

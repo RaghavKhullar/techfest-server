@@ -8,6 +8,7 @@ interface SubtaskInterface extends Document {
     description: string;
     priority: number;
     document: string;
+    userDocument: string;
 }
 
 const SubtaskSchema = new Schema<SubtaskInterface>(
@@ -37,6 +38,10 @@ const SubtaskSchema = new Schema<SubtaskInterface>(
             default: priorityMap.LOW,
         },
         document: {
+            type: String,
+            default: "",
+        },
+        userDocument: {
             type: String,
             default: "",
         },

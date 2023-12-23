@@ -21,14 +21,21 @@ import {
     editTask,
     getSubTasksOfTask,
     getTasksOfProject,
+    updateUserProfile,
+    getUser,
+    fetchAllUsers,
 } from "../controller/admin.controller";
 import { authenticateTokenAdmin } from "../utils/verifyToken";
 
 adminRouter.get("/callback", adminLogin);
 adminRouter.get("/logout", adminLogout);
 
+adminRouter.post("/getUserDetails", authenticateTokenAdmin, getUser);
+adminRouter.get("/getAllUsers", authenticateTokenAdmin, fetchAllUsers);
 adminRouter.get("/getDetails", authenticateTokenAdmin, getCurrentAdmin);
+
 adminRouter.post("/addUser", authenticateTokenAdmin, addUser);
+adminRouter.post("/updateUser", authenticateTokenAdmin, updateUserProfile);
 adminRouter.post("/addAdmin", authenticateTokenAdmin, addAdmin);
 
 adminRouter.post("/addTask", authenticateTokenAdmin, addTask);

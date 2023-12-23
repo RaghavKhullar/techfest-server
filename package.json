@@ -37,12 +37,13 @@
     "scripts": {
         "start": "node build/index.js",
         "compile": "tsc && node build/index.js",
-        "build": "yarn makeDocumentDirectory && tsc",
-        "dev": "yarn makeDocumentDirectory && nodemon -e .ts --exec \"yarn compile\"",
+        "build": "yarn makeImageDirectory && yarn makeDocumentDirectory && tsc",
+        "dev": "yarn makeImageDirectory && yarn makeDocumentDirectory && nodemon -e .ts --exec \"yarn compile\"",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
         "prepare": "husky install",
         "seeder": "tsc && node build/utils/seeders.js",
-        "makeDocumentDirectory": "if ! test -d storage/documents;then mkdir storage/documents;fi"
+        "makeDocumentDirectory": "if ! test -d storage/documents;then mkdir storage/documents;fi",
+        "makeImageDirectory": "if ! test -d storage/images;then mkdir storage/images;fi"
     },
     "lint-staged": {
         "*.{ts,tsx}": [

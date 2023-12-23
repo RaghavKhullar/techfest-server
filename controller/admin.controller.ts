@@ -19,19 +19,41 @@ export const addUser = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const email = req.body.email;
         if (!emailRegex.test(email)) {
             return res.status(400).json({ message: "Invalid user email" });
         }
+        const name = req.body.name;
+        const gender = req.body.gender;
+        const role = req.body.role;
+        const salary = req.body.salary;
+        const position = req.body.position;
+        const joiningDate = req.body.joiningDate;
 
+        const user = await UserModel.findOne({ email });
+        if (user) {
+            return res.status(400).json({ message: "User already exists" });
+        }
         await AllowedUserModel.findOneAndUpdate(
             { email: email, isAdmin: false },
             { email: email, isAdmin: false },
             { upsert: true, new: true }
         );
+        console.log(req.body);
+        const newUser = await UserModel.create({
+            name: name,
+            email: email,
+            gender: gender,
+            role: role,
+            salary: salary,
+            position: position,
+            joiningDate: joiningDate,
+        });
+        await newUser.save();
+
         return res.status(200).json({ message: "User successfully added" });
     } catch (e) {
         console.error(e);
@@ -50,7 +72,7 @@ export const addAdmin = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const email = req.body.email;
@@ -81,7 +103,7 @@ export const addProject = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const name = req.body.name;
@@ -126,7 +148,7 @@ export const addTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const name = req.body.name;
@@ -182,7 +204,7 @@ export const addSubTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const name = req.body.name;
@@ -240,7 +262,7 @@ export const allocateSubTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const userId = req.body.userId;
@@ -292,7 +314,7 @@ export const deallocateSubTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const userId = req.body.userId;
@@ -344,7 +366,7 @@ export const removeProject = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const projectId = req.body.projectId;
@@ -407,7 +429,7 @@ export const removeTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const projectId = req.body.projectId;
@@ -466,7 +488,7 @@ export const removeSubTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const subTaskId = req.body.subTaskId;
@@ -516,7 +538,7 @@ export const getCurrentAdmin = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
         return res.status(200).json({ data: admin });
     } catch (e) {
@@ -536,7 +558,7 @@ export const editProject = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const projectName = req.body.name;
@@ -582,7 +604,7 @@ export const editTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const taskName = req.body.name;
@@ -628,7 +650,7 @@ export const editSubtask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const subtaskName = req.body.name;
@@ -680,7 +702,7 @@ export const getAllProjects = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
 
         const projects = await ProjectModel.find();
@@ -728,7 +750,7 @@ export const getTasksOfProject = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
         const projectId = req.body.projectId;
         if (!isValidObjectId(projectId)) {
@@ -792,7 +814,7 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                     sameSite: "none",
                     path: "/",
                 })
-                .redirect(`${process.env.FRONTEND_URL}/admin/login`);
+                .redirect(`${process.env.FRONTEND_URL}/login`);
         }
         const projectId = req.body.projectId;
         const taskId = req.body.taskId;
@@ -841,6 +863,7 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                         allotedUsers: returnUser,
                         priority: subTask.priority || priorityMap.LOW,
                         document: subTask.document || "",
+                        userDocument: subTask.userDocument || "",
                         creationTime: subTask._id.getTimestamp(),
                     };
                 }
@@ -854,6 +877,122 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
             subTasks: data,
         };
         return res.status(200).json({ data: finalData });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const updateUserProfile = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const gender = req.body.gender;
+        const role = req.body.role;
+        const salary = req.body.salary;
+        const position = req.body.position;
+        const absences = req.body.absences;
+        const joiningDate = req.body.joiningDate;
+        const currentRating = req.body.currentRating;
+        const moral = req.body.moral;
+        const userId = req.body.userId;
+        console.log(userId);
+        if (!isValidObjectId(userId)) {
+            return res.status(400).json({ message: "Invalid params" });
+        }
+        const updatedUser = await UserModel.findByIdAndUpdate(userId, {
+            gender: gender,
+            role: role,
+            salary: salary,
+            position: position,
+            absences: absences,
+            joiningDate: joiningDate,
+            currentRating: currentRating,
+            moral: moral,
+        });
+        if (!updatedUser) {
+            return res.status(400).json({ message: "User doesn't exist" });
+        }
+        return res.status(200).json({ message: "User updated succesfully" });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const getUser = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const userId = req.body.userId;
+
+        if (!isValidObjectId(userId)) {
+            return res.status(400).json({ message: "Invalid params" });
+        }
+        const user = await UserModel.findById(userId);
+        if (!user) {
+            return res.status(400).json({ message: "User doesn't exist" });
+        }
+        return res.status(200).json({ data: user });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const fetchAllUsers = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const users = await UserModel.find({});
+        const data = users.map((user) => {
+            return {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                image: user.image,
+                gender: user.gender,
+                age: user.age,
+                isMarried: user.isMarried,
+                role: user.role,
+                salary: user.salary,
+                position: user.position,
+                absences: user.absences,
+                meanMonthlyHours: user.meanMonthlyHours,
+                joiningDate: user.joiningDate,
+                currentRating: user.currentRating, // 0-10 (given by admin)
+                moral: user.moral, // given by admin
+                stressBurnoutScore: user.stressBurnoutScore, // ML model
+            };
+        });
+        return res.status(200).json({ data: data });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });

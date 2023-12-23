@@ -10,7 +10,7 @@ interface TaskInterface extends Document {
 }
 
 export const statusMap = {
-    DUE: "due",
+    TODO: "todo",
     PROGRESS: "progress",
     COMPLETE: "complete",
 };
@@ -38,7 +38,7 @@ const TaskSchema = new Schema<TaskInterface>(
         },
         status: {
             type: String,
-            default: statusMap.DUE,
+            default: statusMap.TODO,
         },
         description: {
             type: String,

@@ -27,7 +27,7 @@ const ProjectSchema = new Schema<ProjectInterface>(
         },
         status: {
             type: String,
-            default: statusMap.DUE,
+            default: statusMap.TODO,
         },
         description: {
             type: String,

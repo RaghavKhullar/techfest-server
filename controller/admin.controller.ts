@@ -105,12 +105,10 @@ export const addProject = async (req: any, res: any) => {
         });
         await newProject.save();
 
-        return res
-            .status(200)
-            .json({
-                data: newProject._id,
-                message: "Project created successfully",
-            });
+        return res.status(200).json({
+            data: newProject._id,
+            message: "Project created successfully",
+        });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });
@@ -163,7 +161,7 @@ export const addTask = async (req: any, res: any) => {
                 childTasks: newTask._id,
             },
         });
-
+        // Add api call for aws server for creating sub task
         return res
             .status(200)
             .json({ data: newTask._id, message: "Task added successfully" });
@@ -541,10 +539,11 @@ export const editProject = async (req: any, res: any) => {
                 .redirect(`${process.env.FRONTEND_URL}/admin/login`);
         }
 
-        const projectName = req.body.projectName;
+        const projectName = req.body.name;
+        const descriptiion = req.body.description;
         const deadline = req.body.deadline || (new Date() as Date);
         const projectId = req.body.projectId;
-        const status = req.body.status || statusMap.DUE;
+        const status = req.body.status || statusMap.TODO;
         const priority = req.body.priority || priorityMap.LOW;
         if (!isValidObjectId(projectId)) {
             return res.status(400).json({ message: "Invalid params" });
@@ -557,6 +556,7 @@ export const editProject = async (req: any, res: any) => {
                 deadline: deadline,
                 status: status,
                 priority: priority,
+                description: descriptiion,
             }
         );
         if (!newUpdatedProject) {
@@ -585,12 +585,12 @@ export const editTask = async (req: any, res: any) => {
                 .redirect(`${process.env.FRONTEND_URL}/admin/login`);
         }
 
-        const taskName = req.body.taskName;
+        const taskName = req.body.name;
         const deadline = req.body.deadline || (new Date() as Date);
         const taskId = req.body.taskId;
-        const status = req.body.status || statusMap.DUE;
+        const status = req.body.status || statusMap.TODO;
         const priority = req.body.priority || priorityMap.LOW;
-
+        const description = req.body.descriptiion;
         if (!isValidObjectId(taskId)) {
             return res.status(400).json({ message: "Invalid params" });
         }
@@ -602,6 +602,7 @@ export const editTask = async (req: any, res: any) => {
                 deadline: deadline,
                 status: status,
                 priority: priority,
+                description: description,
             }
         );
         if (!newUpdatedTask) {
@@ -630,12 +631,13 @@ export const editSubtask = async (req: any, res: any) => {
                 .redirect(`${process.env.FRONTEND_URL}/admin/login`);
         }
 
-        const subtaskName = req.body.subtaskName;
+        const subtaskName = req.body.name;
         const deadline = req.body.deadline || (new Date() as Date);
         const subtaskId = req.body.subtaskId;
-        const status = req.body.status || statusMap.DUE;
+        const status = req.body.status || statusMap.TODO;
         const priority = req.body.priority || priorityMap.LOW;
         const fileName = req.file?.filename || "";
+        const description = req.body.descriptiion;
         if (!isValidObjectId(subtaskId)) {
             return res.status(400).json({ message: "Invalid params" });
         }
@@ -644,6 +646,7 @@ export const editSubtask = async (req: any, res: any) => {
             deadline: deadline,
             status: status,
             priority: priority,
+            description: description,
         };
         if (req.body.isFileUpdated == "true") {
             updateQuery.document = fileName;
@@ -701,8 +704,9 @@ export const getAllProjects = async (req: any, res: any) => {
                     deadline: project.deadline,
                     childTasks: childTasks,
                     description: project.description || "",
-                    status: project.status || statusMap.DUE,
+                    status: project.status || statusMap.TODO,
                     priority: project.priority || priorityMap.LOW,
+                    creationTime: project._id.getTimestamp(),
                 };
             })
         );
@@ -756,10 +760,11 @@ export const getTasksOfProject = async (req: any, res: any) => {
                         name: task.name,
                         deadline: task.deadline,
                         childTasks: subTasks,
-                        status: task.status || statusMap.DUE,
+                        status: task.status || statusMap.TODO,
                         description: task.description || "",
                         id: task._id,
                         priority: task.priority || priorityMap.LOW,
+                        creationTime: task._id.getTimestamp(),
                     };
                 }
             })
@@ -831,11 +836,12 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                         name: subTask.name,
                         deadline: subTask.deadline,
                         id: subTask._id,
-                        status: subTask.status || statusMap.DUE,
+                        status: subTask.status || statusMap.TODO,
                         description: subTask.description || "",
                         allotedUsers: returnUser,
                         priority: subTask.priority || priorityMap.LOW,
                         document: subTask.document || "",
+                        creationTime: subTask._id.getTimestamp(),
                     };
                 }
             })

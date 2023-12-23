@@ -26,7 +26,7 @@ const SubtaskSchema = new Schema<SubtaskInterface>(
         },
         status: {
             type: String,
-            default: statusMap.DUE,
+            default: statusMap.TODO,
         },
         description: {
             type: String,

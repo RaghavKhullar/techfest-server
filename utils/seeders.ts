@@ -7,6 +7,7 @@ import ProjectModel from "../models/task/project.model";
 import connectDatabase from "../utils/connectDatabase";
 import TaskModel from "../models/task/task.model";
 import SubtaskModel from "../models/task/subtask.model";
+import UserModel from "../models/user/user.model";
 
 const dateEntries = [
     new Date("January 15, 2023"),
@@ -146,4 +147,33 @@ const seeder3 = async () => {
     return;
 };
 
+const seeder4 = async () => {
+    connectDatabase(config.db, "mongodb://localhost:27017/");
+    const user = await UserModel.findOne();
+    if (!user) {
+        console.error("No user");
+        return;
+    }
+
+    const allSubtask = await SubtaskModel.find();
+    const n = allSubtask.length;
+    let count = 0;
+    await Promise.all(
+        allSubtask.map(async (subTask) => {
+            if (Math.floor(Math.random() * n) <= n / 2) {
+                await UserModel.findOneAndUpdate(
+                    { email: user.email },
+                    { $push: { allotedTasks: subTask._id } }
+                );
+                await SubtaskModel.findByIdAndUpdate(subTask._id, {
+                    $set: { allotedUsers: user._id },
+                });
+                ++count;
+            }
+        })
+    );
+    console.log(count);
+};
+
+// seeder4();
 // seeder3();

@@ -42,7 +42,6 @@ export const addUser = async (req: any, res: any) => {
             { email: email, isAdmin: false },
             { upsert: true, new: true }
         );
-        console.log(req.body);
         const newUser = await UserModel.create({
             name: name,
             email: email,
@@ -856,7 +855,7 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                     }
                     return {
                         name: subTask.name,
-                        deadline: subTask.deadline,
+                        deadline: subTask.deadline || new Date(),
                         id: subTask._id,
                         status: subTask.status || statusMap.TODO,
                         description: subTask.description || "",
@@ -905,7 +904,6 @@ export const updateUserProfile = async (req: any, res: any) => {
         const currentRating = req.body.currentRating;
         const moral = req.body.moral;
         const userId = req.body.userId;
-        console.log(userId);
         if (!isValidObjectId(userId)) {
             return res.status(400).json({ message: "Invalid params" });
         }

@@ -4,6 +4,26 @@ import TaskModel, { priorityMap, statusMap } from "../models/task/task.model";
 import UserModel from "../models/user/user.model";
 import ProjectModel from "../models/task/project.model";
 
+export const getCurrentUser = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        return res.status(200).json({ data: user });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
 export const updateUserProfile = async (req: any, res: any) => {
     try {
         const user = await UserModel.findById(req.userId);
@@ -268,6 +288,62 @@ export const editSubtask = async (req: any, res: any) => {
         return res
             .status(200)
             .json({ message: "Sub task edited successfully" });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const getDetailsForAnalytics = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const absentDays = user.absences;
+
+        let todoSubTask = 0,
+            completeSubTask = 0,
+            inProgressSubTask = 0;
+
+        const subTasks = await Promise.all(
+            user.allotedTasks.map(async (subTaskId) => {
+                if (isValidObjectId(subTaskId)) {
+                    const subTask = await SubtaskModel.findById(subTaskId);
+                    if (subTask) {
+                        if (subTask.status == statusMap.TODO) ++todoSubTask;
+                        else if (subTask.status == statusMap.COMPLETE)
+                            ++completeSubTask;
+                        else if (subTask.status == statusMap.PROGRESS)
+                            ++inProgressSubTask;
+                        return {
+                            name: subTask.name,
+                            deadline: subTask.deadline || new Date(),
+                            priority: subTask.priority || priorityMap.LOW,
+                            status: subTask.status || statusMap.TODO,
+                        };
+                    }
+                }
+            })
+        );
+
+        return res.status(200).json({
+            absentDays: user.absences || 0,
+            todoSubTask: todoSubTask,
+            completeSubTask: completeSubTask,
+            inProgressSubTask: inProgressSubTask,
+            subTasks: subTasks,
+            currentRating: user.currentRating,
+            stressBurnoutScore: user.stressBurnoutScore || 0,
+            moral: user.moral || "Moderate",
+        });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });

@@ -95,8 +95,8 @@ const UserSchema = new Schema<UserInterface>({
     }, // 0-10 (given by admin)
     moral: {
         type: String,
-        default: "",
-    }, // 0-5 (given by admin)
+        default: "Moderate",
+    },
     stressBurnoutScore: {
         type: Number,
         default: 0,

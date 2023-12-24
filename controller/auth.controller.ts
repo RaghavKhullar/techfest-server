@@ -43,7 +43,7 @@ export const userLogin = async (req: any, res: any) => {
             }
         );
 
-        return res.redirect(`${process.env.FRONTEND_URL}/home`);
+        return res.redirect(`${process.env.FRONTEND_URL}/user/home`);
     } catch (err: any) {
         return res.redirect(`${process.env.FRONTEND_URL}/login`);
     }

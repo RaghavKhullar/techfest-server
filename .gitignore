@@ -3,3 +3,4 @@ node_modules/
 config/config.ts
 build/
 storage/documents/
+storage/images/

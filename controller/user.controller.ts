@@ -99,7 +99,10 @@ export const getAllProjects = async (req: any, res: any) => {
                 };
             })
         );
-        return res.status(200).json({ data: data });
+        const projectData = data.filter(
+            (val) => val != null && val != undefined
+        );
+        return res.status(200).json({ data: projectData });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });
@@ -158,10 +161,11 @@ export const getTasksOfProject = async (req: any, res: any) => {
                 }
             })
         );
+        const tasks = data.filter((val) => val != undefined && val != null);
         const finalData = {
             projectName: project.name,
             projectId: project._id,
-            tasks: data,
+            tasks: tasks,
         };
         return res.status(200).json({ data: finalData });
     } catch (e) {
@@ -236,12 +240,14 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                 }
             })
         );
+
+        const subtasks = data.filter((val) => val != undefined && val != null);
         const finalData = {
             projectName: project.name,
             projectId: project._id,
             taskName: task.name,
             taskId: task._id,
-            subTasks: data,
+            subTasks: subtasks,
         };
         return res.status(200).json({ data: finalData });
     } catch (e) {
@@ -277,7 +283,7 @@ export const editSubtask = async (req: any, res: any) => {
             updateQuery.userDocument = fileName;
         }
         const newUpdatedTask = await SubtaskModel.findOneAndUpdate(
-            { _id: subtaskId },
+            { _id: subtaskId, allotedUsers: req.userId },
             updateQuery
         );
         if (!newUpdatedTask) {
@@ -313,7 +319,7 @@ export const getDetailsForAnalytics = async (req: any, res: any) => {
             completeSubTask = 0,
             inProgressSubTask = 0;
 
-        const subTasks = await Promise.all(
+        const data = await Promise.all(
             user.allotedTasks.map(async (subTaskId) => {
                 if (isValidObjectId(subTaskId)) {
                     const subTask = await SubtaskModel.findById(subTaskId);
@@ -333,8 +339,21 @@ export const getDetailsForAnalytics = async (req: any, res: any) => {
                 }
             })
         );
-
+        const subTasks = data.filter((val) => val != undefined && val != null);
         return res.status(200).json({
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                image: user.image || "",
+                gender: user.gender || "Male",
+                age: user.age || 0,
+                isMarried: user.isMarried || false,
+                role: user.role || "HR",
+                salary: user.salary || 0,
+                joiningDate: user.joiningDate || new Date(),
+                position: user.position || "Intern",
+            },
             absentDays: user.absences || 0,
             todoSubTask: todoSubTask,
             completeSubTask: completeSubTask,
@@ -344,6 +363,67 @@ export const getDetailsForAnalytics = async (req: any, res: any) => {
             stressBurnoutScore: user.stressBurnoutScore || 0,
             moral: user.moral || "Moderate",
         });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const allocatedSubtasks = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const subTasks = await Promise.all(
+            user.allotedTasks.map(async (subTaskId) => {
+                if (isValidObjectId(subTaskId)) {
+                    const subTask = await SubtaskModel.findById(subTaskId);
+                    const task = await TaskModel.findOne({
+                        childTasks: subTaskId,
+                    });
+                    if (task && subTask) {
+                        const project = await ProjectModel.findOne({
+                            childTasks: task._id,
+                        });
+                        if (project) {
+                            return {
+                                projectId: project._id,
+                                projectName: project.name,
+                                taskId: task._id,
+                                taskName: task.name,
+                                id: subTask._id,
+                                name: subTask.name,
+                                deadline: subTask.deadline || new Date(),
+                                priority: subTask.priority || priorityMap.LOW,
+                                status: subTask.status || statusMap.TODO,
+                                document: subTask.document || "",
+                                userDocument: subTask.userDocument || "",
+                                description: subTask.description || "",
+                                creationTime: subTask._id.getTimestamp(),
+                            };
+                        }
+                    }
+                }
+            })
+        );
+        const data = subTasks.filter((val) => val != undefined && val != null);
+        const finalData = {
+            user: {
+                id: user._id,
+                name: user.name,
+                image: user.image || "",
+            },
+            subTasks: data,
+        };
+        return res.status(200).json({ data: finalData });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });

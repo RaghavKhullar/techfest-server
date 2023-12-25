@@ -121,7 +121,7 @@ export const addProject = async (req: any, res: any) => {
         const newProject = await ProjectModel.create({
             name: name,
             deadline: deadline,
-            descriptiion: description,
+            description: description,
             priority: priority,
         });
         await newProject.save();
@@ -611,7 +611,7 @@ export const editTask = async (req: any, res: any) => {
         const taskId = req.body.taskId;
         const status = req.body.status || statusMap.TODO;
         const priority = req.body.priority || priorityMap.LOW;
-        const description = req.body.descriptiion;
+        const description = req.body.description;
         if (!isValidObjectId(taskId)) {
             return res.status(400).json({ message: "Invalid params" });
         }
@@ -658,7 +658,7 @@ export const editSubtask = async (req: any, res: any) => {
         const status = req.body.status || statusMap.TODO;
         const priority = req.body.priority || priorityMap.LOW;
         const fileName = req.file?.filename || "";
-        const description = req.body.descriptiion;
+        const description = req.body.description;
         if (!isValidObjectId(subtaskId)) {
             return res.status(400).json({ message: "Invalid params" });
         }
@@ -731,7 +731,8 @@ export const getAllProjects = async (req: any, res: any) => {
                 };
             })
         );
-        return res.status(200).json({ data: data });
+        const finalData = data.filter((val) => val != undefined && val != null);
+        return res.status(200).json({ data: finalData });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });
@@ -790,10 +791,11 @@ export const getTasksOfProject = async (req: any, res: any) => {
                 }
             })
         );
+        const taskData = data.filter((val) => val != undefined && val != null);
         const finalData = {
             projectName: project.name,
             projectId: project._id,
-            tasks: data,
+            tasks: taskData,
         };
         return res.status(200).json({ data: finalData });
     } catch (e) {
@@ -868,12 +870,15 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                 }
             })
         );
+        const subTaskData = data.filter(
+            (val) => val != undefined && val != null
+        );
         const finalData = {
             projectName: project.name,
             projectId: project._id,
             taskName: task.name,
             taskId: task._id,
-            subTasks: data,
+            subTasks: subTaskData,
         };
         return res.status(200).json({ data: finalData });
     } catch (e) {

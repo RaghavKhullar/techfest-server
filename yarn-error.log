@@ -2,7 +2,7 @@ Arguments:
   /home/raghav/.nvm/versions/node/v18.15.0/bin/node /usr/bin/yarn compile
 
 PATH: 
-  /home/raghav/Desktop/techfest/techfest-server/node_modules/.bin:/tmp/yarn--1703390093561-0.6391724727976149:/home/raghav/Desktop/techfest/techfest-server/node_modules/.bin:/home/raghav/.config/yarn/link/node_modules/.bin:/home/raghav/.yarn/bin:/home/raghav/.nvm/versions/node/v18.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/lib/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/bin/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/bin:/home/raghav/.cargo/bin:/home/raghav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+  /home/raghav/Desktop/techfest/techfest-server/node_modules/.bin:/tmp/yarn--1703466998218-0.7125830361989072:/home/raghav/Desktop/techfest/techfest-server/node_modules/.bin:/home/raghav/.config/yarn/link/node_modules/.bin:/home/raghav/.yarn/bin:/home/raghav/.nvm/versions/node/v18.15.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/lib/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/bin/node_modules/npm/bin/node-gyp-bin:/home/raghav/.nvm/versions/node/v18.15.0/bin:/home/raghav/.cargo/bin:/home/raghav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
 Yarn version: 
   1.22.19

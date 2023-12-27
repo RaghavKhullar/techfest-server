@@ -3,6 +3,8 @@ import SubtaskModel from "../models/task/subtask.model";
 import TaskModel, { priorityMap, statusMap } from "../models/task/task.model";
 import UserModel from "../models/user/user.model";
 import ProjectModel from "../models/task/project.model";
+import axios from "axios";
+import config from "../config/config";
 
 export const getCurrentUser = async (req: any, res: any) => {
     try {
@@ -426,6 +428,158 @@ export const allocatedSubtasks = async (req: any, res: any) => {
         return res.status(200).json({ data: finalData });
     } catch (e) {
         console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const calendarData = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const subTasks = await Promise.all(
+            user.allotedTasks.map(async (subTaskId) => {
+                if (isValidObjectId(subTaskId)) {
+                    const subTask = await SubtaskModel.findById(subTaskId);
+                    const task = await TaskModel.findOne({
+                        childTasks: subTaskId,
+                    });
+                    if (task && subTask) {
+                        const project = await ProjectModel.findOne({
+                            childTasks: task._id,
+                        });
+                        if (project) {
+                            return {
+                                projectId: project._id,
+                                projectName: project.name,
+                                taskId: task._id,
+                                taskName: task.name,
+                                id: subTask._id,
+                                name: subTask.name,
+                                deadline:
+                                    new Date(subTask.deadline) || new Date(),
+                                priority: subTask.priority || priorityMap.LOW,
+                                status: subTask.status || statusMap.TODO,
+                                document: subTask.document || "",
+                                userDocument: subTask.userDocument || "",
+                                description: subTask.description || "",
+                                creationTime: subTask._id.getTimestamp(),
+                            };
+                        }
+                    }
+                }
+            })
+        );
+        const data = subTasks.filter((val) => val != undefined && val != null);
+        const map = new Map();
+        data.forEach((entry) => {
+            if (entry) {
+                const year = entry.deadline.getFullYear();
+                const month = entry.deadline.getMonth() + 1;
+                if (map.has(year)) {
+                    if (map.get(year).has(month)) {
+                        map.get(year).get(month).push(entry);
+                    } else {
+                        map.get(year).set(month, [entry]);
+                    }
+                } else {
+                    map.set(year, new Map());
+                    map.get(year).set(month, [entry]);
+                }
+            }
+        });
+        return res.status(200).json({ data: map });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const writeEmail = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.emailPoints;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/generate_email",
+            data: { email_points: points },
+        });
+        return res.status(200).json(response.data);
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const improveText = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.text;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/improve",
+            data: { original_text: points },
+        });
+        return res.status(200).json(response.data);
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const summariseText = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.text;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/summarise",
+            data: { text: points },
+        });
+        return res.status(200).json(response.data);
+    } catch {
+        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };

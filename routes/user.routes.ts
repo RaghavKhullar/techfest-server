@@ -4,17 +4,22 @@ const userRouter = express.Router();
 import { userLogout, userLogin } from "../controller/auth.controller";
 import {
     allocatedSubtasks,
+    calendarData,
     editSubtask,
     getAllProjects,
     getCurrentUser,
     getDetailsForAnalytics,
     getSubTasksOfTask,
     getTasksOfProject,
+    improveText,
+    summariseText,
     updateUserProfile,
+    writeEmail,
 } from "../controller/user.controller";
 import { authenticateUserToken } from "../utils/verifyToken";
 import upload from "../utils/fileUpload";
 import imageUpload from "../utils/imageUpload";
+
 userRouter.get("/callback", userLogin);
 userRouter.get("/logout", userLogout);
 
@@ -37,5 +42,9 @@ userRouter.post(
     updateUserProfile
 );
 userRouter.get("/getAllotedSubtasks", authenticateUserToken, allocatedSubtasks);
+userRouter.get("/getTasksCalendar", authenticateUserToken, calendarData);
+userRouter.post("/writeEmail", authenticateUserToken, writeEmail);
+userRouter.post("/improveWriting", authenticateUserToken, improveText);
+userRouter.post("/summariseText", authenticateUserToken, summariseText);
 
 export default userRouter;

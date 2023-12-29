@@ -24,6 +24,11 @@ import {
     updateUserProfile,
     getUser,
     fetchAllUsers,
+    generateSubTasks,
+    writeEmail,
+    summariseText,
+    generateChat,
+    improveText,
 } from "../controller/admin.controller";
 import { authenticateTokenAdmin } from "../utils/verifyToken";
 
@@ -67,8 +72,15 @@ adminRouter.post(
     deallocateSubTask
 );
 
+// adminRouter.posy
 adminRouter.get("/getProjects", authenticateTokenAdmin, getAllProjects);
 adminRouter.post("/getTasks", authenticateTokenAdmin, getTasksOfProject);
 adminRouter.post("/getSubTasks", authenticateTokenAdmin, getSubTasksOfTask);
+
+adminRouter.post("/generateSubtask", authenticateTokenAdmin, generateSubTasks);
+adminRouter.post("/writeEmail", authenticateTokenAdmin, writeEmail);
+adminRouter.post("/improveWriting", authenticateTokenAdmin, improveText);
+adminRouter.post("/summariseText", authenticateTokenAdmin, summariseText);
+adminRouter.post("/generateChat", authenticateTokenAdmin, generateChat);
 
 export default adminRouter;

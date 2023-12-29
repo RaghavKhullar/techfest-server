@@ -9,6 +9,7 @@ import {
     getAllProjects,
     getCurrentUser,
     getDetailsForAnalytics,
+    getReview,
     getSubTasksOfTask,
     getTasksOfProject,
     improveText,
@@ -46,5 +47,7 @@ userRouter.get("/getTasksCalendar", authenticateUserToken, calendarData);
 userRouter.post("/writeEmail", authenticateUserToken, writeEmail);
 userRouter.post("/improveWriting", authenticateUserToken, improveText);
 userRouter.post("/summariseText", authenticateUserToken, summariseText);
+// userRouter.post("/generateChat", authenticateUserToken, generateChat);
+userRouter.post("/generateReview", authenticateUserToken, getReview);
 
 export default userRouter;

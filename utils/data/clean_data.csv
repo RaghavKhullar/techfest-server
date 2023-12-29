@@ -1,0 +1,538 @@
+Employee Name,ID,Gender,Age,Married,Role,Salary,Position,Absences,Projects_Completed,Mean Monthly Hours,Years in the company,Current_Employ_Rating,Moral,Stress & Burnout Score,Ongoing_Project_Count,Projects_Within_Deadline,Project_Start_Date,Project_Description,Project_Difficulty,Project_Deadline,Manager_ID,Completion_Time
+Ram Prasad,1,Male,34,Married,Backend Developer,"2,60,000",Senior,2,42,143,5,9,Very High,3,3,22,5/2/2024,Design an efficient algorithm for data processing and visualization,High,15/3/2024,4,37
+Neeraj Joshi,2,Male,58,Married,Backend Developer,"3,00,000",Senior,8,50,201,17,5,High,1,4,59,19/06/2022,Develop a secure user registration and login system,High,10/07/2022,4,16
+Shilpa Pathak,3,Female,41,Married,Backend Developer,"3,00,000",Senior,10,68,198,16,7,Very High,2,5,24,5/6/2023,Design and implement database structure for maintaining user login information,High,15/7/2023,4,38
+Radhika Khanna,4,Female,34,Married,HR,"1,10,000",Senior,6,23,201,12,8,High,1,4,8,20/10/2023,Develop and implement employee wellness programs and ensure employee wellbeing,Medium,26/10/2023,2,4
+Anjali Rana,5,Female,25,Married,HR,"1,20,000",Junior,1,22,145,1,9,High,5,1,8,16/7/2023,Working with Line Managers to implement and evaluate new employee engagement initiatives,Medium,24/8/2023,2,36
+Neeraj Khandelwal,6,Male,32,Married,Backend Developer,"2,10,000",Senior,8,56,146,7,6,Very High,3,4,45,10/7/2023,Develop a secure user authentication system that integrates all access permissions and authenticate user login,High,22/7/2023,4,8
+Nandini Singh,7,Female,37,Married,HR,"1,25,000",Senior,8,37,100,16,7,High,4,3,19,5/1/2024,Develop innovative and data-driven solutions to reduce operational costs,Medium,1/3/2024,2,55
+Tanvi Prasad,8,Female,43,Married,HR,"1,20,000",Senior,2,51,251,11,7,High,2,2,25,8/5/2023,Create a recruitment strategy for sourcing and onboarding new talent,Medium,20/6/2023,2,45
+Tarun Mathur,9,Male,30,Married,HR,"2,00,000",Senior,6,64,145,12,8,High,3,4,40,5/7/23,Develop a comprehensive workflow system to automate routine tasks,High,10/10/23,2,90
+Amy Narang,10,Female,30,Married,Backend Developer,"2,50,000",Senior,3,48,181,11,10,Very High,1,2,64,27/8/2023,Design an algorithm to predict user behavior on the platform,High,8/9/2023,4,7
+Archana Joshi,11,Female,32,Married,HR,"1,30,000",Senior,1,19,210,7,7,Moderate,4,5,21,23/7/2023,Manage weekly reports and analysis to assess the performance of the team,Medium,28/7/2023,2,5
+Hemant Raj,12,Male,57,Married,HR,"1,10,000",Senior,6,36,156,11,6,High,2,4,17,11/11/22,Coordinate with the HR team to design team building activities that promote creativity and boost morale,Low,18/11/22,2,4
+Abhinav Kumar,13,Male,44,Married,Backend Developer,"3,50,000",Senior,5,66,224,19,7,High,1,4,38,2/11/2023,Develop a secure user registration and login system with additional features to improve usability,High,9/11/2023,4,3
+Kamilla Roy,14,Female,39,Married,HR,"1,50,000",Senior,7,28,210,10,7,Moderate,3,3,4,7/7/2023,Develop metrics to measure the success and progress of the Sales and Marketing team,Medium,24/8/2023,2,50
+Amala Shukla,15,Female,33,Married,HR,"1,50,000",Senior,7,25,252,9,7,High,3,2,25,20/9/2023,Perform performance reviews for the development team and ensure availability of development and training resources,High,30/10/2023,2,36
+Shashwat Chatterjee,16,Male,31,Married,Backend Developer,"2,30,000",Senior,5,45,184,10,7,High,2,6,23,15/8/2023,Develop customized features for backend production systems,Medium,10/8/23,4,5
+Kalpana Joshi,17,Female,62,Married,HR,"1,10,000",Senior,9,68,198,24,5,High,3,5,12,26/8/2023,Coordinating career development and promotional opportunities to ensure fair treatment for all employees,Medium,4/10/2023,2,38
+Shantanu Dhawan,18,Male,58,Married,Backend Developer,"2,50,000",Senior,9,65,150,25,8,Moderate,3,4,50,25/7/2023,Develop automated software processes to ensure safety and reliability of data,High,10/8/23,4,10
+Abigail Jain,19,Female,34,Married,HR,"1,70,000",Senior,4,68,135,12,8,High,3,3,18,25/7/2023,Designing a data analytics dashboard to track employee performance and suggest improvement actions,High,5/8/2023,2,6
+Garv Sharma,20,Male,43,Married,Backend Developer,"2,80,000",Senior,8,68,202,18,7,High,3,4,43,12/06/2023,Design and implement database structure for storing and retrieving user data,High,25/7/2023,4,41
+Sarah Jacob,21,Female,28,Married,Backend Developer,"4,00,000",Senior,3,55,168,10,9,Moderate,2,3,40,10/9/2023,Establish a secure payment system using cryptocurrency,High,15/9/2023,4,3
+Anamika Gupta,22,Female,32,Married,HR,"1,50,000",Senior,3,15,181,6,10,High,2,2,16,8/12/2023,Organize a team workshop to discuss skills such as communication and collaboration,Low,20/12/2023,2,8
+Jacob Rodriguez,23,Male,56,Married,Backend Developer,"2,50,000",Senior,8,75,131,14,10,Very High,4,2,72,24/8/2023,Develop a secure user registration and login system,High,9/11/22,4,285
+Sonia Dubey,24,Female,45,Married,HR,"2,00,000",Senior,1,23,268,17,9,High,3,4,24,1/9/2023,Develop guidelines and procedures for proper employee recruitment and selection,Medium,4/9/2023,2,5
+Aman Patel,25,Male,52,Married,Frontend Developer,"1,20,000",Senior,8,33,286,19,10,Very High,4,4,17,1/6/2023,Design a product website for showcasing and selling products,High,15/7/2023,4,40
+Monica Joshi,26,Female,32,Married,HR,"1,50,000",Senior,3,25,254,10,8,High,1,3,8,14/10/2023,Develop a program to collect feedbacks from employees on their job satisfaction,High,30/11/2023,2,41
+Pooja Rai,27,Female,29,Married,HR,"1,20,000",Senior,6,34,225,9,8,High,3,1,16,13/11/2023,Coordinating training sessions for managers regarding HR policies and compliance practices,Medium,30/11/2023,2,15
+Karishma Bajwa,28,Female,43,Married,HR,"1,20,000",Senior,7,22,253,8,9,High,2,2,13,2/3/2024,Train the HR team on effective recruitment and onboarding and compliance practices,Medium,11/4/2024,2,42
+Sanaya Pareek,29,Female,40,Married,Backend Developer,"3,20,000",Senior,5,55,295,18,9,Very High,1,5,27,9/4/2023,Develop a secure user registration and login system,High,24/4/2023,4,11
+Ranjan Gupta,30,Male,59,Married,Backend Developer,"4,50,000",Senior,7,69,222,25,6,High,3,2,58,12/10/2023,Design and implement database structure for storing and retrieving user data,High,21/11/2023,4,37
+John Miller,31,Male,53,Married,Backend Developer,"2,20,000",Senior,1,55,104,21,7,High,2,3,25,12/1/2024,Improve the scalability and performance of the application,Medium,20/2/2024,4,39
+Shabnam Gupta,32,Female,30,Married,HR,"1,20,000",Senior,8,29,199,6,7,Moderate,4,2,14,6/10/2023,Analyze analysis of employee data to optimize productivity and morale,Medium,22/10/2023,2,20
+Neeraj Jain,33,Male,24,Bachelor,Frontend Developer,"1,10,000",Junior,2,21,77,2,7,High,2,3,7,5/10/2023,Create a simple and intuitive user experience using HTML/CSS,Low,26/10/2023,3,17
+Neha Desai,34,Female,29,Married,HR,"1,10,000",Senior,4,14,215,5,9,High,2,3,16,28/8/2023,Conducting regular performance appraisals for the development team,Low,5/9/23,2,6
+Mark Jacob,35,Male,60,Married,Backend Developer,"3,00,000",Senior,4,62,208,20,7,High,1,2,50,28/10/2023,Design and implement an efficient database structure for the company's customer data,High,10/11/2023,4,9
+Neeraj Narayan,36,Male,45,Married,Backend Developer,"2,80,000",Senior,9,53,231,16,8,High,1,3,32,14/11/2023,Develop an efficient query processing system with scalability,High,20/11/2023,4,3
+Samir Gupta,37,Male,63,Married,Backend Developer,"3,00,000",Senior,1,40,173,16,5,High,1,2,28,29/8/2023,Develop a secure user registration and login system,Medium,6/9/2023,4,10
+Vijay Kumar,38,Male,33,Married,Frontend Developer,"1,80,000",Senior,0,26,154,7,7,Very High,2,3,17,28/10/2023,Design a shopping cart feature set for the website and optimize the checkout process,Medium,13/11/2023,1,14
+Ramit Verma,39,Male,30,Married,Backend Developer,"2,30,000",Senior,2,45,160,7,8,High,1,1,43,11/10/23,Design a secure user login system with multi factor authentication,High,2/11/23,4,20
+Vishal Sardesai,40,Male,56,Married,Backend Developer,"2,70,000",Senior,2,55,102,22,5,Very High,3,3,45,23/6/2023,Develop and optimize an efficient database structure for storing and retrieving large volumes of data,High,8/10/2023,4,103
+Shivani Shah,41,Female,32,Married,HR,"1,25,000",Senior,3,30,253,5,10,High,4,1,22,8/9/2023,Planning and conducting workshops and seminars to ensure cohesive alignment with the organizational goals,Medium,15/10/2023,2,36
+Vikram Roy,42,Male,32,Married,Frontend Developer,"1,15,000",Senior,4,25,192,8,7,High,1,3,33,7/6/23,Design an intuitive frontend with clear user flow for mobile users,Medium,22/6/2023,1,13
+Rahul Mahajan,43,Male,37,Married,Frontend Developer,"1,50,000",Senior,3,19,219,10,8,High,1,4,15,20/9/2023,Create and develop a functioning frontend page featuring AI productivity tools,Low,25/9/2023,1,3
+Aishwarya Jain,44,Female,34,Married,Frontend Developer,"1,80,000",Senior,9,39,123,11,7,High,2,2,23,17/4/2023,Implement navigation features and refine user interface design of the website,Medium,24/4/2023,1,8
+Sonal Desai,45,Female,32,Married,HR,"1,30,000",Senior,4,26,268,6,7,High,4,4,14,15/7/2023,Design and finalize recruitment process to ensure an effective workflow,Medium,20/8/2023,2,37
+Neelam Mehra,46,Female,30,Married,HR,"1,20,000",Junior,3,24,331,12,9,High,2,1,11,5/10/2023,Analyzing company-wide sources of HR data to identify operational issues and craft solutions,Medium,18/10/2023,2,12
+Anupam Patil,47,Male,32,Married,Backend Developer,"2,60,000",Senior,8,65,154,12,9,Very High,3,4,25,11/7/2023,Improve existing server infrastructure for the website,High,22/7/2023,3,10
+Jill Fernandes,48,Female,40,Married,Backend Developer,"3,50,000",Senior,5,61,284,15,10,Very High,3,2,65,30/13/2023,Develop a secure user registration and login system,High,15/10/2023,4,38
+Sana Verma,49,Female,38,Married,Frontend Developer,"1,30,000",Senior,7,36,220,4,9,High,3,2,25,8/10/2023,Build a mobile application for customer engagement and feedback,High,15/9/2023,1,21
+Sneha Rao,50,Female,31,Married,HR,"1,20,000",Senior,7,18,208,8,7,High,2,2,23,19/10/2023,Organizing recruitment drives for the development teams in the upcoming months,Medium,25/11/2023,3,40
+Ankur Bhatia,51,Male,32,Married,Backend Developer,"2,25,000",Senior,10,64,201,15,7,High,2,4,40,20/9/2023,Create a secure system for data validation and interpretation of the results,High,9/10/2023,4,18
+Seema Srivastava,52,Female,56,Married,HR,"3,50,000",Senior,8,19,175,16,7,High,1,2,6,2/8/2024,Designing and establishing an end-to-end onboarding process for new employees,High,24/8/2024,2,17
+Arihant Jain,53,Male,32,Married,Backend Developer,"3,45,000",Senior,5,42,142,11,6,High,2,1,42,20/9/2023,Design and implement database structure for storing and retrieving user data,High,15/9/2023,4,0
+Nidhi Murthy,54,Female,39,Married,HR,"1,20,000",Senior,4,40,241,14,9,High,1,2,25,8/8/2023,Plan and coordinate activities related to personnel search and recruitment,Medium,25/9/2023,2,51
+Ria Singh,55,Female,24,Bachelor,HR,"1,15,000",Senior,1,22,254,2,8,Moderate,3,5,10,27/9/2023,Analyzing customer satisfaction data and providing strategies for improving customer service,Medium,1/11/23,2,35
+Jatin Verma,56,Male,43,Married,Backend Developer,"6,15,000",Senior,9,66,210,16,6,Very High,4,2,53,12/11/23,Develop an end-to-end machine learning pipeline and deploy it in production,High,6/12/23,4,22
+Pooja Bhatia,57,Female,36,Married,HR,"1,25,000",Senior,2,36,180,8,5,Moderate,1,3,13,6/10/2023,Developing employee engagement initiatives and programs to ensure healthy workplace morale,Medium,15/10/2023,2,10
+Navin Singh,58,Male,30,Married,HR,"1,50,000",Senior,4,24,237,5,8,High,2,3,20,20/11/2023,Develop a system to train and recognize workplace behavior and potential violations for corrective action,Medium,1/12/23,2,15
+Neha Shinde,59,Female,42,Married,HR,"2,30,000",Senior,3,74,158,15,9,Very High,2,1,25,8/5/2023,Offering feedback and guidance to team members regarding their progress and development,Medium,28/7/2023,2,80
+Rohit Sanghvi,60,Male,43,Married,Backend Developer,"2,80,000",Senior,2,54,166,10,7,High,1,3,39,7/10/2023,Design and develop a platform for the automated monitoring and alert system for data accuracy,Medium,24/10/2023,4,17
+Yash Jindal,61,Male,28,Married,R&D,"1,50,000",Senior,6,55,194,8,8,High,1,4,20,25/8/2023,Develop an application that utilizes automation for testing user interfaces,Medium,19/10/2023,5,58
+Vidhi Jain,62,Female,30,Married,HR,"1,20,000",Senior,4,19,180,7,7,Moderate,4,2,11,1/7/2023,Train new employees on the company policies and procedures,Low,21/7/2023,2,16
+John Smith,63,Male,62,Married,Backend Developer,"3,50,000",Senior,4,58,180,14,8,Very High,2,3,50,1/4/2023,Develop a platform for automating the user authentication process,Medium,15/6/2023,4,77
+Prayag Savla,64,Male,32,Married,Backend Developer,"3,00,000",Senior,7,59,181,12,10,Very High,4,4,62,19/8/2023,Develop a secure encryption system for protecting sensitive user data,High,12/9/2023,4,19
+Sara Johnson,65,Female,29,Married,HR,"1,50,000",Senior,4,21,197,8,7,High,4,2,14,25/11/2023,Plan and implement a comprehensive HR strategy to increase employee productivity,Medium,17/12/2023,2,22
+Ravinder Mathur,66,Male,35,Married,Frontend Developer,"1,50,000",Senior,7,45,217,12,10,Very High,3,3,25,15/5/2023,Design the user interface and user experience to ensure easy navigation and usage,High,12/6/2023,1,23
+John Smith,63,Male,30,Married,Frontend Developer,"1,45,000",Senior,3,29,144,5,9,High,2,1,26,15/9/2023,Design and develop mobile applications for improved user experience,Medium,20/10/2023,1,35
+Jyoti Roy,67,Female,42,Married,HR,"1,80,000",Senior,7,41,208,11,9,Moderate,2,3,28,20/11/2023,Develop a training metrics dashboard to measure the progress of onboarding trainees,Medium,13/12/2023,2,27
+Anjali Gupta,68,Female,49,Married,HR,"2,75,000",Senior,8,75,245,17,4,Low,2,4,42,29/4/2023,Develop a system for evaluating employee performance and assigning bonus rewards accordingly,Low,19/5/2023,2,17
+Ankush Gupta,69,Male,51,Married,R&D,"1,60,000",Senior,7,58,122,16,7,Low,3,4,5,20/12/2023,Investigate the implications of introducing an AI-powered scheduling system for staff,High,10/1/24,5,23
+Geetika Sharma,70,Female,29,Married,Frontend Developer,"2,00,000",Senior,7,67,188,5,7,High,2,3,16,8/3/23,Develop a secure content management system,Medium,1/4/2023,1,25
+Nirav Desai,71,Male,61,Married,Backend Developer,"4,00,000",Senior,3,75,259,15,10,High,1,1,62,4/9/2024,Design and develop custom software for a manufacturing control system,High,21/10/24,4,45
+Kirti Bajaj,72,Female,30,Married,HR,"1,00,000",Senior,8,20,246,4,9,Moderate,3,1,6,17/7/2023,Administer company policies to ensure compliance and healthy working environment,Low,20/9/2023,2,58
+Anusha Jaipuria,73,Female,34,Married,Backend Developer,"2,30,000",Senior,5,64,159,15,8,Very High,4,7,46,30/11/2023,Design an algorithm to detect user fraud,High,10/12/23,4,8
+Manik Dawar,74,Female,40,Married,Backend Developer,"2,75,000",Senior,6,67,150,10,7,High,1,4,40,9/9/2023,Develop a secure user registration and login system,High,15/9/2023,4,5
+Nikita Mathur,75,Female,24,Bachelor,Backend Developer,"1,80,000",Junior,3,20,177,1,8,Low,5,4,12,7/9/2023,Design efficient algorithms for data retrieval tasks,High,1/10/23,4,21
+Kritika Mathur,76,Female,34,Married,HR,"1,35,000",Senior,6,32,241,10,7,Moderate,4,4,15,15/5/2023,Recruiting and onboarding personnel for specialized roles,Medium,22/6/2023,5,39
+Kartik Verma,77,Male,30,Married,Backend Developer,"2,50,000",Senior,5,51,170,9,7,High,3,3,40,11/11/23,Develop and integrate user authentication methods for a seamless user experience,High,20/12/2023,4,38
+Janvi Arya,78,Female,35,Married,HR,"1,50,000",Senior,5,23,156,12,9,High,2,4,15,4/1/2024,Evaluate the training program effectiveness and recommend improvements,Medium,22/1/2024,2,18
+Arshdeep Sharma,79,Male,34,Married,HR,"1,20,000",Senior,2,24,208,11,9,High,2,2,22,6/10/23,Monitor work performance of the team members and guide them for proper work delegation,Low,15/10/2023,5,5
+Amey Jain,80,Male,42,Married,Backend Developer,"3,50,000",Senior,6,73,150,12,6,Very High,4,5,27,23/11/2023,Develop a powerful search engine with algorithms to provide targeted results,High,5/12/23,4,7
+Ananya Bhat,81,Female,44,Married,HR,"2,10,000",Senior,3,55,164,16,7,High,4,4,23,7/10/2023,Compile data from employee surveys and further analyze the results for necessary changes for improved productivity,Low,17/10/2023,1,8
+Rashmi Singh,82,Female,37,Married,HR,"1,75,000",Senior,5,22,241,14,9,High,2,2,18,25/7/2023,Arrange team meetings for learning and development and manage the employee database,Medium,31/8/2023,2,38
+Prateek Sidhwani,83,Male,39,Married,Backend Developer,"3,50,000",Senior,10,72,155,13,6,High,2,1,37,10/6/23,Design the administrative back-end interface,High,3/7/2023,4,19
+Karan Doshi,84,Male,34,Married,Frontend Developer,"1,35,000",Junior,2,33,182,7,7,High,2,1,25,21/4/2023,"Optimize the application for cross platform usage (Web, Mobile and Desktop)",Medium,8/5/23,1,20
+Riya Raj,85,Female,24,Bachelor,HR,"1,20,000",Junior,8,16,191,1,7,High,3,4,10,18/8/2023,Recruiting and interviewing potential candidates for open positions,Medium,30/8/2023,2,11
+Mansee Mehta,86,Female,24,Bachelor,Frontend Developer,"1,40,000",Senior,1,7,189,4,6,Very High,4,2,20,30/7/2023,Design and implement a user feedback system for feature requests and bug reports,Medium,15/8/2023,1,16
+Tanya Gupta,87,Female,28,Married,Frontend Developer,"1,85,000",Senior,2,31,149,7,9,High,4,2,25,8/9/2023,Develop the user interface ensuring compatibility with devices from multiple vendors,Medium,31/9/2023,1,25
+Dhruv Jha,88,Male,54,Married,Backend Developer,"3,60,000",Senior,10,98,40,31,4,Low,5,5,30,24/9/2023,Design and implement an automated workflow for analytics,Low,15/12/2023,3,76
+Tia Sinha,89,Female,28,Married,HR,"1,10,000",Junior,3,20,310,4,7,High,1,3,15,19/9/2023,Design and implement an intervention plan for enhancing employee retention,Medium,8/10/23,2,22
+Hemant Yadav,90,Male,28,Married,Backend Developer,"2,25,000",Senior,8,78,162,7,10,Very High,2,3,40,25/10/2023,Design the overall system architecture for mobile client-server application,High,27/11/2023,4,29
+Harshika Prakash,91,Female,52,Married,HR,"1,70,000",Senior,6,24,261,18,7,High,2,0,15,1/7/2023,Supporting the recruitment of new team members,Medium,11/8/2023,2,44
+Shilpa Rai,92,Female,34,Married,HR,"1,30,000",Senior,6,54,164,10,8,High,2,1,22,1/7/23,Analyze and solve customer complaints and inquiries,Low,10/7/2023,2,7
+Rajeev Mehra,93,Male,31,Married,Backend Developer,"3,00,000",Senior,2,48,150,11,9,Very High,2,3,35,20/9/2023,Develop efficient APIs to provide improved accessibility and scalability,High,30/11/22,4,294
+Kavya Choudhary,94,Female,43,Married,Backend Developer,"2,30,000",Senior,7,45,148,15,9,Very High,4,3,58,4/10/23,Develop infrastructure for automating delivery of persistent data and store server logs,High,15/10/2023,4,6
+Rajeev Saini,95,Male,30,Married,Frontend Developer,"1,20,000",Senior,3,45,253,8,7,Moderate,2,3,32,26/1/2024,Create a frontend feature that tracks users activity and data on site usage,Medium,9/2/2024,1,13
+Kajal Agarwal,96,Female,32,Married,R&D,"1,80,000",Senior,12,55,166,8,9,Very High,4,4,6,14/11/2023,Conduct research on competitor websites offering productivity tools and analyse their features,High,31/11/2023,5,13
+Ripu Kapoor,97,Male,32,Married,Backend Developer,"2,70,000",Senior,4,52,189,8,7,High,2,1,40,9/5/2023,Develop an algorithm to detect fraudulent web traffic,High,20/9/2023,3,126
+Neeraj Ahuja,98,Male,29,Married,Frontend Developer,"1,35,000",Senior,2,36,199,5,7,Low,3,1,18,25/8/2023,Design the user interface and user experience to enable easy navigation for users and customers,Medium,5/10/2023,4,42
+Neha Ahuja,99,Female,34,Married,R&D,"1,60,000",Senior,4,19,189,9,8,Moderate,3,2,15,5/3/23,Analyzing the usability of the current website and market research on the topics of customer preferences and latest web design trends,High,28/3/2023,5,21
+Neelam Chopra,100,Female,31,Married,HR,"1,20,000",Junior,3,33,236,0,8,High,4,2,11,15/12/2023,Survey the demography of target customers for the latest project,Low,15/6/2024,2,184
+Anita Patel,101,Female,58,Married,HR,"1,70,000",Senior,8,56,228,25,4,High,1,5,10,28/11/2023,Designing and delivering short term mentoring programs to employees for better team bonding,Medium,8/12/23,2,14
+Kunal Sharma,102,Male,49,Married,Backend Developer,"5,50,000",Senior,3,61,197,18,9,Very High,2,5,40,25/11/2023,Design a system architecture with access control and authentication,High,12/12/2023,4,16
+Neelam Desai,103,Female,30,Married,Frontend Developer,"1,35,000",Senior,4,24,188,4,7,High,1,2,25,3/7/23,Design the user interface and user experience to ensure easy navigation and usage,Low,10/9/23,1,63
+Krishna Sinha,104,Male,34,Married,Backend Developer,"2,35,000",Senior,6,58,165,8,7,High,1,6,27,10/7/23,Design & Iterate a User Friendly Search & Filter Feature,High,17/9/2023,4,62
+Garima Sharma,105,Female,35,Married,HR,"1,20,000",Senior,7,24,277,8,9,Moderate,4,1,15,24/8/2023,"Coordinate team meetings, training and manage conflict resolution within the organization",Medium,28/10/2023,2,66
+Neha Gupta,106,Female,28,Married,HR,"1,90,000",Senior,6,66,238,5,8,Very High,3,4,11,14/5/2023,Lead the recruitment process to find and onboard new employees,High,20/5/2023,2,5
+Vinayak Verma,107,Male,35,Married,Backend Developer,"2,25,000",Senior,1,73,136,15,10,High,3,5,28,9/2/2024,Develop a complex system for storing and retrieving confidential data,High,15/5/2024,4,93
+Kritika Khullar,108,Female,25,Bachelor,Frontend Developer,"1,05,000",Junior,5,18,230,4,9,Low,4,4,22,20/9/2023,Design and develop a product which is both visually appealing and feature-rich,High,10/10/23,1,15
+Nirmal Mathur,109,Male,36,Married,Backend Developer,"2,50,000",Senior,2,42,220,11,8,High,2,3,16,11/11/2023,Design and implement an authentication system that allows permission sought users to view and manage sensitive data,High,21/11/2023,4,8
+Sadia Sheikh,110,Female,41,Married,HR,"1,20,000",Senior,8,25,220,17,7,Moderate,2,3,19,11/10/24,Partner with the marketing team to develop strategies for a promotional campaign for a new product launch,Medium,25/10/2025,2,378
+Aditya Rai,111,Male,42,Married,Backend Developer,"2,40,000",Senior,7,71,239,14,9,High,3,3,45,1/4/2024,Develop APIs for the existing web application and integrate with database,Medium,30/4/2024,4,33
+Jasmine Jha,112,Female,51,Married,HR,"1,50,000",Senior,8,25,303,18,6,Low,2,5,22,20/7/2023,Create an onboarding plan for new hires to ensure they acclimate quickly and successfully,Low,15/7/2023,2,0
+Jonnie Smith,113,Male,62,Married,Backend Developer,"4,75,000",Senior,4,68,165,25,3,Moderate,3,5,63,1/7/22,Develop a secure registration and complex authentication system customized to user preferences,High,25/7/22,4,21
+Aditya Chaudhary,114,Male,28,Married,Frontend Developer,"1,30,000",Senior,2,29,175,4,7,Moderate,2,2,20,23/7/2023,Consolidate the web development technologies and prominence of AI,High,8/8/2023,1,10
+Pratik Jain,115,Male,62,Married,HR,"3,50,000",Senior,7,59,151,25,6,High,1,1,39,1/1/2023,Create a communication system to ensure seamless communication between customers staff and management,Medium,6/2/23,5,38
+Viraj Mehta,116,Male,29,Married,Frontend Developer,"1,50,000",Senior,5,23,195,4,9,Very High,3,2,28,3/5/2023,Design an intuitive UI for a client website using HTML and CSS,Medium,20/5/2024,1,380
+John Smith,63,Male,43,Married,Backend Developer,"2,70,000",Senior,5,54,211,12,5,High,1,4,58,20/10/2023,Develop secure authentication protocols for user login,High,29/10/2023,4,5
+Pooja Sharma,117,Female,22,Bachelor,Backend Developer,"2,00,000",Junior,1,33,190,4,7,Moderate,1,0,20,15/10/2023,Develop a centralized user authentication and encryption system to protect customer data,High,30/11/2023,4,42
+Raj Mehta,118,Male,44,Married,Backend Developer,"2,50,000",Senior,4,58,186,20,7,High,1,2,64,20/10/2023,Handle the backend infrastructure of the website to ensure high speed at peak hours,Medium,3/11/23,4,14
+Riya Jain,119,Female,37,Married,HR,"1,50,000",Senior,5,32,225,22,10,Moderate,2,1,17,20/10/2023,Coordinating training sessions for the development team regarding the latest AI technologies and web development practices,Medium,15/11/22,2,341
+Mukund Mehta,120,Male,44,Married,Backend Developer,"5,25,000",Senior,8,65,212,11,5,Low,2,4,55,21/9/2023,Design and develop an AI-powered application with an intuitive UI and UX,High,18/11/2023,4,52
+Karan Gupta,121,Male,38,Married,Backend Developer,"2,40,000",Senior,6,59,210,18,7,High,2,3,40,27/7/2023,Develop an update system to detect when new software patches are released,High,20/8/2023,4,18
+Reena Jumar,122,Female,22,Bachelor,HR,"85,000",Junior,0,11,154,0,7,High,4,2,10,8/10/23,Design and implement effective recruitment strategies for the Development team,Medium,15/11/2023,2,39
+Kabir Jain,123,Male,60,Married,Frontend Developer,"1,50,000",Senior,5,28,132,30,4,Low,2,0,20,20/5/2023,Implement a graphical user interface design that works across devices,Medium,10/7/2023,3,51
+Sunny Mehta,124,Male,27,Married,Frontend Developer,"1,25,000",Senior,5,30,191,8,7,High,4,3,25,2/9/23,Design the user interface and user experience to ensure easy navigation and usage,Medium,10/10/2023,1,36
+Raj Singh,125,Male,33,Married,Backend Developer,"2,47,000",Senior,5,50,192,10,9,Very High,4,5,53,2/8/2023,Design and develop automated processes to monitor and analyze the influx of new customers,High,10/9/2023,4,36
+Arshita Gupta,126,Female,43,Married,HR,"1,40,000",Senior,8,58,350,16,10,High,5,3,12,10/4/24,Manage and improve employee relations by facilitating effective communication and team building initiatives,High,15/5/25,2,396
+Riya Das,127,Female,33,Married,HR,"1,50,000",Senior,10,78,189,8,7,High,2,3,21,22/4/2023,Organise regular wellness programmes for employees in order to reduce work-related fatigue andburnout,Medium,28/4/2023,2,8
+Vivian Parikh,128,Female,34,Married,HR,"1,50,000",Senior,6,23,169,7,9,High,1,3,11,13/12/2023,Designing & conducting surveys to assess employee morale and satisfaction,Medium,20/12/2023,2,10
+Mayank Shukla,129,Male,45,Married,Backend Developer,"3,00,000",Senior,3,45,182,13,9,Very High,4,4,46,23/11/2023,Develop financial software for a bank that should meet security standards,High,13/12/2023,4,19
+Pandita Sharma,130,Female,22,Bachelor,HR,"90,000",Junior,2,10,181,1,7,Moderate,4,2,10,1/5/24,Plan and coordinate the management team’s labor tasks for the upcoming fiscal year,Medium,30/4/24,2,-1
+John Mehta,131,Male,30,Married,Backend Developer,"2,45,000",Senior,3,50,200,9,7,High,3,12,40,08/11/2023,Develop a secure user registration and login system with automatic password resetting features,High,22/11/2023,4,12
+Neha Pandey,132,Female,35,Married,HR,"1,50,000",Senior,6,45,218,10,9,Moderate,1,1,4,11/9/2023,Plan and coordinate employee engagement activities,Medium,19/9/2023,2,8
+Riya Gupta,133,Female,25,Bachelor,HR,"1,20,000",Junior,5,11,160,4,8,Low,4,5,14,15/10/2023,Develop and manage rewards system for the team according to performance metrics,Medium,1/11/2022,2,352
+Raj Malhotra,134,Male,32,Married,Backend Developer,"2,80,000",Senior,5,65,153,10,7,Very High,4,3,54,4/7/2023,Design a secure socket layer for a customer authentication system,High,2/8/2023,4,26
+Maximillian Jameson,135,Male,47,Married,Backend Developer,"2,83,500",Senior,8,54,149,28,3,High,3,2,36,2/11/2023,Designing web applications for users to access data and analytics stored in the database,High,13/11/2023,4,9
+Ishaan Singh,136,Male,22,Bachelor,Frontend Developer,"1,20,000",Junior,4,14,143,1,8,Low,3,2,16,25/11/2023,Design and develop an efficient Frontend web application structure,Medium,9/12/23,1,17
+Kavya Gupta,137,Female,39,Married,HR,"1,70,000",Senior,15,28,368,16,5,Low,3,3,26,10/9/2023,Organize team activities for improving the bond among team members and increase team efficiency,Low,15/10/2023,2,33
+Nishant Gupta,138,Male,24,Bachelor,Frontend Developer,"1,30,000",Junior,0,24,198,2,7,Low,4,5,3,22/9/2023,Design mockups and attractively positioned elements on the website,Low,29/9/2023,3,5
+Himanshu Verma,139,Male,45,Married,Backend Developer,"3,80,000",Senior,10,64,202,25,6,High,1,3,56,27/12/2023,Develop a secure user registration and login system with extra security measures,High,11/01/24,4,17
+Radhika Patil,140,Female,23,Bachelor,HR,"95,000",Junior,1,10,190,1,10,Moderate,3,2,14,2/3/2023,Restructure the employee benefits and payroll system,Low,9/6/2023,2,92
+Simran Sharma,141,Female,32,Married,HR,"1,80,000",Senior,7,22,234,9,9,High,4,5,28,05/12/19,Creating policies which form the basis of performance tracking,Medium,15/1/2024,2,1507
+Shreya Mehta,142,Female,34,Married,HR,"1,25,000",Senior,5,24,164,8,9,High,3,3,15,20/11/2023,Design and implement strategy for onboarding of new hires ensuring smooth transition to team dynamics,Medium,10/12/23,2,20
+Kabir Patel,143,Male,63,Married,Backend Developer,"3,50,000",Senior,11,77,202,22,6,High,2,2,42,30/11/2023,Design a comprehensive system to keep track of inventory products,High,7/12/2023,4,3
+Pankhuri Rai,144,Female,32,Married,HR,"1,80,000",Senior,3,35,132,8,9,Very High,1,2,20,19/6/2023,Prepare weekly progress reports and analyze performance of team,Medium,25/7/2023,2,39
+Kavita Sharma,145,Female,44,Married,HR,"2,50,000",Senior,8,58,99,15,5,High,4,4,13,27/7/2023,Research and analyze different employee development plans,Medium,10/8/22,2,355
+Shubhangi Sharma,146,Female,32,Married,Backend Developer,"2,50,000",Senior,4,44,187,10,8,Very High,3,3,30,10/10/2023,Design and maintain company’s intranet infrastructure,High,10/11/25,4,758
+Neha Verma,147,Female,32,Married,HR,"1,25,000",Senior,5,35,185,8,8,Moderate,1,2,20,15/9/2023,Set up employee surveys and track feedback and monitor results,Medium,10/10/23,2,28
+Krishna Gopal,148,Male,30,Married,Backend Developer,"2,25,000",Senior,4,59,140,10,7,High,1,1,42,21/5/2023,Design a system for communicating updates to different teams in the organization,Medium,21/6/2023,4,32
+Abhishek Jha,149,Male,27,Married,Frontend Developer,"1,20,000",Senior,10,18,132,4,8,Moderate,5,3,18,26/7/2023,Design the user interface and user experience to ensure easy navigation and usage,Medium,1/8/2023,1,6
+Amita Pandey,150,Female,47,Married,Backend Developer,"3,50,000",Senior,10,58,201,20,3,High,3,4,25,2/12/23,Design and develop a comprehensive software module to ensure maximum scalability,High,26/12/2023,4,20
+Gaurav Kumar,151,Male,25,Bachelor,Frontend Developer,"1,40,000",Senior,3,35,172,5,7,High,1,4,32,20/9/2023,Create a live session for customer support and troubleshooting,High,30/9/2023,1,8
+Ajay Kaur,152,Female,55,Married,HR,"2,00,000",Senior,5,24,288,20,7,Moderate,2,4,39,11/12/23,Interview and conduct background checks for potential hires and coordinate onboarding sessions,Low,22/12/2023,2,9
+Kartik Bhaskar,153,Male,55,Married,Backend Developer,"2,60,000",Senior,6,62,148,18,6,High,1,5,65,12/11/23,Develop a secure database to store and process user authentication details,Medium,15/11/2023,4,4
+Raman Chaudhary,154,Male,30,Married,Backend Developer,"2,35,000",Senior,7,54,192,11,7,High,2,3,45,14/4/2023,Design and implement optimized database queries for high user volumes,Medium,28/4/2023,4,18
+Ishita Verma,155,Female,32,Married,Backend Developer,"2,50,000",Senior,4,54,235,8,7,High,2,2,29,5/5/2024,Design and implement database structure for storing and retrieving user data,High,12/6/24,4,35
+Suraj Patel,156,Male,27,Bachelor,Backend Developer,"1,75,000",Junior,2,30,177,5,7,Moderate,3,1,23,9/10/2023,Design and implement a set of RESTful web services for Google Ads API,High,30/11/2023,4,47
+Neha Agrawal,157,Female,22,Bachelor,R&D,"1,35,000",Junior,1,8,174,6,8,High,2,2,23,27/10/2023,Study the difference between mobile metrics from Android to iOS,Medium,15/11/2023,5,19
+Mateshwari Kaur,158,Female,32,Married,HR,"1,20,000",Senior,2,32,176,10,7,High,1,3,24,22/12/2023,Arrange career counseling events and job fairs for unemployed youths,Medium,30/12/2023,2,9
+Kriti Jain,159,Female,38,Married,HR,"1,25,000",Senior,3,12,152,17,8,Moderate,3,3,10,11/8/23,Develop and implement communication practices to ensure that all team members are properly informed regarding the scope of work and progress updates,Medium,30/8/2023,2,20
+Eifa Ahmed,160,Female,36,Married,HR,"1,60,000",Senior,6,58,145,15,6,High,3,3,15,1/8/23,Design and implement different incentive schemes for the team members to improve workplace productivity,Medium,15/9/2023,2,42
+Jasmine Jain,161,Female,39,Married,Backend Developer,"2,50,000",Senior,1,33,157,14,6,High,2,3,43,25/7/2023,Design server models for data processing and storage,High,8/9/2023,4,38
+Varun Srivastava,162,Male,25,Bachelor,Frontend Developer,"1,25,000",Senior,7,32,145,7,8,High,1,3,22,03/11/2023,Develop a UI/UX interface to improve customer shopping experience,Medium,15/9/2023,3,52
+Aman Rana,163,Male,35,Married,Backend Developer,"3,20,000",Senior,8,65,240,15,8,Very High,4,6,23,4/7/2023,Develop a secure user authentication system relying on biometric data,High,20/7/2023,4,12
+Nazir Ansari,164,Male,51,Married,Backend Developer,"2,50,000",Senior,5,53,305,18,5,High,2,2,35,8/7/2023,Update existing databases and extract useful analytics,High,25/7/2023,4,16
+Nishit Shah,165,Male,44,Married,Backend Developer,"3,25,000",Senior,7,78,114,15,9,Very High,4,5,12,20/7/2023,Develop new algorithms and modules to speed up the AI processing time,High,15/7/2023,4,3
+Kabir Tandon,166,Male,33,Married,Backend Developer,"2,08,750",Senior,1,48,195,10,8,Very High,4,4,46,19/8/2023,Develop a secure system for file transfer and data storage,High,10/9/2023,4,17
+Prateek Patel,167,Male,31,Married,Frontend Developer,"1,80,000",Senior,4,37,241,8,9,High,2,4,25,10/7/2023,Develop a secure login system and integrate it into the existing website,Medium,15/8/2023,1,39
+Pavitra Rao,168,Female,62,Married,HR,"1,90,000",Senior,4,15,205,18,10,Moderate,3,2,20,17/5/2023,Arranging bi-annual team meetings for discussing progress updates and addressing any issues faced by the team,Low,1/6/2023,2,12
+Neha Mehta,169,Female,25,Married,HR,"1,20,000",Junior,3,18,230,4,8,Moderate,3,4,6,20/4/2023,Manage employee vacations and compensatory leaves,Low,17/5/2023,2,22
+Neha Rathi,170,Female,29,Married,HR,"1,25,000",Senior,4,19,227,3,9,High,3,4,16,11/2/23,Monitor coordinate and facilitate connection of remote workers with the centralized office,Medium,21/6/2023,2,129
+Disha Rao,171,Female,29,Married,Backend Developer,"2,50,000",Senior,6,49,198,10,9,High,5,4,50,20/9/2023,Develop a secure payment processing system for customer transactions,Medium,10/11/22,4,315
+Mohit Gupta,172,Male,64,Married,Backend Developer,"2,50,000",Senior,9,81,194,16,7,Very High,3,5,46,8/8/2023,Develop a secure customer loyalty system for use in the mobile app,High,30/9/2023,4,49
+Yash Verma,173,Male,32,Married,Backend Developer,"3,00,000",Senior,7,65,231,14,9,High,4,3,39,8/7/2023,Develop a secure user registration and login system ensuring superior user experience through artificial intelligence,High,20/8/2023,4,38
+Riya Sharma,174,Female,31,Married,HR,"3,50,000",Senior,7,86,198,11,8,High,4,4,25,25/9/2020,Schedule regular workshops regarding performance improvement metrics and techniques,Medium,30/9/2020,2,6
+Mihir Sharma,175,Male,38,Married,Backend Developer,"3,00,000",Senior,1,40,226,13,6,Very High,2,2,57,20/9/2023,Create an automated data-collection system Image Recognition to store user data,High,7/10/23,4,12
+Neeraj Sinha,176,Male,44,Married,Backend Developer,"3,50,000",Senior,8,64,190,18,8,High,2,1,40,30/5/2023,Design and implement database structure for storing and retrieving user data,High,10/10/23,4,125
+Michael Thomas,177,Male,33,Married,Frontend Developer,"2,00,000",Senior,3,45,198,8,7,High,1,1,20,20/8/2023,Design and build a comprehensive search system with search engine optimization,Medium,27/8/2023,5,6
+Raj Patel,178,Male,30,Married,Backend Developer,"2,25,000",Senior,4,55,222,11,9,High,1,4,40,5/7/2023,Design and build scalability plans for website architecture to accommodate growing user demands,High,30/7/2023,4,23
+Neha Valecha,179,Female,44,Married,HR,"1,50,000",Senior,4,32,284,15,9,Moderate,4,1,17,27/8/2023,Create and monitor the organization’s performance review program for all teams,Medium,30/9/2023,2,32
+Ranjit Singh,180,Male,32,Married,Backend Developer,"2,40,000",Senior,2,45,132,10,9,High,2,3,59,26/9/2023,Design and implement a secure mobile app with integrated features for facial recognition and authentication,Medium,1/10/2023,4,8
+Mohit Verma,181,Male,43,Married,Backend Developer,"2,60,000",Senior,6,70,159,15,8,High,2,3,65,21/6/2023,Develop a secure database system to keep track of user data and records,High,30/6/2023,4,5
+Abhay Agarwal,182,Male,33,Married,Backend Developer,"2,50,000",Senior,2,51,178,11,7,High,2,3,38,10/7/23,Design and implement database structure for storing and retrieving user data,Medium,17/7/2023,4,8
+Nitin Saxena,183,Male,24,Bachelor,Frontend Developer,"1,20,000",Junior,5,16,177,4,7,Very Low,5,3,25,15/7/2023,Develop a responsive web page with intuitive UX elements,Medium,7/8/2023,3,20
+Mohit Sethi,184,Male,36,Married,Backend Developer,"2,70,000",Senior,4,65,202,15,9,Very High,3,1,37,3/7/2023,Refactor the existing code ensuring smooth operation and compatibility with new features,High,12/7/23,4,5
+Ekta Malik,185,Female,28,Married,HR,"1,10,000",Senior,6,44,163,8,7,Moderate,3,1,18,30/10/2023,Organizing online events and awards programs to promote an engaging working culture for the team,Low,7/11/23,2,4
+Kartik Rao,186,Male,33,Married,Frontend Developer,"1,80,000",Senior,5,35,141,9,7,High,2,3,25,8/6/2023,Develop web scraper for aggregating data from competitor websites,Medium,18/7/2023,1,44
+Anupam Raj,187,Male,33,Married,Backend Developer,"2,80,000",Senior,3,55,230,15,8,Very High,3,5,38,20/11/2023,Design and develop fail-safe restoration and backup protocols for the website,High,3/12/23,4,8
+Dhruv Bagga,188,Male,31,Married,Backend Developer,"2,60,000",Senior,7,69,174,14,8,High,2,3,40,30/9/2023,Design and debug large scale software applications,High,17/10/2023,4,15
+Akshay Patil,189,Male,53,Married,Backend Developer,"2,45,000",Senior,8,93,409,18,7,High,4,2,33,19/10/2023,Design and build an automated user authentication system,High,25/10/2023,4,5
+Ragini Verma,190,Female,22,Bachelor,HR,"1,25,000",Junior,5,7,199,3,7,High,4,2,6,22/6/2023,Develop an internal system to track employee performance and satisfaction,Medium,25/6/2023,2,4
+Anjali Dave,191,Female,37,Married,HR,"2,20,000",Senior,2,48,183,11,9,High,1,3,18,10/12/23,Design and implement performance evaluation and recognition processes for employees,Medium,20/12/2023,2,12
+Rajesh Mehta,192,Male,52,Married,Backend Developer,"3,50,000",Senior,12,77,385,16,4,High,2,2,50,22/9/2023,Design and implement algorithms for database interaction and optimization,High,8/10/22,4,347
+Raghav Gupta,193,Male,55,Married,Backend Developer,"3,50,000",Senior,2,44,130,23,8,High,4,3,57,13/11/2023,Design and implement robust security algorithms for data encryption and access control,Medium,20/11/2023,4,6
+Kartik Gupta,194,Male,32,Married,Frontend Developer,"1,25,000",Senior,4,29,160,7,8,High,2,4,28,30/5/24,Design the user interface and user experience to ensure easy navigation and usage,High,5/7/24,1,32
+Pooja Sinha,195,Female,35,Married,Backend Developer,"2,15,000",Senior,7,53,128,10,9,Very High,1,2,38,4/7/2023,Design a secure payment gateway integration for the website,High,26/8/2023,3,51
+Udit Shetty,196,Male,32,Married,Backend Developer,"2,50,000",Senior,4,40,150,12,9,High,2,4,43,24/8/2023,Develop a secure user registration and login system,High,8/9/2023,4,11
+Nikhil Shukla,197,Male,44,Married,Backend Developer,"2,00,000",Senior,15,65,183,20,6,High,3,4,47,15/7/2023,Develop algorithms to generate personalized recommendations for the end-user,High,14/8/2023,3,24
+Sonal Khanna,198,Female,32,Married,HR,"1,75,000",Senior,5,24,198,8,7,Moderate,3,5,19,21/8/2023,Create onboarding documents and employees handbooks for new hires,Medium,17/9/2023,2,25
+Amrita Singh,199,Female,45,Married,HR,"1,50,000",Senior,8,57,216,15,7,Moderate,2,2,8,4/10/2023,Arranging monitoring and analyzing employee performance and providing feedback,Low,16/11/21,2,686
+Leonard Charles,200,Male,50,Married,Backend Developer,"2,50,000",Senior,5,55,187,15,6,Very High,2,2,49,15/8/2023,Design and implement database structure for storing and retrieving user data,High,1/10/2023,4,41
+Tara Pujari,201,Female,44,Married,HR,"1,50,000",Senior,3,19,199,16,6,Moderate,3,2,12,2/2/2024,Drafting and implementing policies and procedures in the organization,Medium,14/3/2024,2,40
+Avani Mehta,202,Female,43,Married,HR,"1,80,000",Senior,7,60,235,15,9,High,4,0,5,20/8/2023,Generate an employee engagement plan and strategize onboarding activities,Medium,10/9/23,2,20
+Anusha Sharma,203,Female,29,Married,HR,"1,15,000",Senior,3,34,231,5,7,Low,3,2,9,18/7/2023,Arranging interview and evaluation sessions for prospective employees,Medium,25/7/2023,2,5
+Nidhi Sachdev,204,Female,55,Married,HR,"6,50,000",Senior,7,23,265,25,4,Moderate,3,0,5,16/4/2023,Arrange internal and external workshops for young workforce to help them grow,Low,9/4/2023,2,3
+Sonam Singh,205,Female,27,Married,HR,"1,15,000",Senior,4,12,181,3,9,High,3,4,13,13/11/2023,Customize and optimize the current recruitment system for faster and accessible candidate reviews,Medium,24/11/2023,2,10
+Siddharth Mahajan,206,Male,35,Married,Backend Developer,"3,50,000",Senior,4,59,198,18,9,Very High,3,4,45,14/11/2023,Design and implement database structures for storing and retrieving web-based user data,High,21/11/2023,4,4
+Nancy Sharma,207,Female,30,Married,Backend Developer,"2,25,000",Senior,8,55,149,8,7,High,4,3,33,5/7/23,Design a system for efficient user authorization and storage of sensitive user data,High,26/7/2023,4,18
+Parkash Sinha,208,Male,37,Married,Frontend Developer,"1,45,000",Senior,7,55,189,8,6,Moderate,3,1,25,15/3/2023,Integration of a machine learning algorithm into an existing system to automate performance tracking and optimization,Medium,15/8/2023,1,150
+Ankit Raj,209,Male,22,Bachelor,Frontend Developer,"1,10,000",Junior,2,10,184,4,5,High,1,1,23,25/10/2023,Developing search features to allow website visitors to quickly access content,Medium,14/11/2023,3,22
+Riya Patil,210,Female,29,Married,HR,"1,20,000",Senior,8,24,211,7,6,Moderate,4,4,24,25/6/2023,Developing a company wide system for tracking customer feedback and employee reviews,Medium,1/8/2023,2,37
+Akshay Mehta,211,Male,33,Married,Backend Developer,"2,20,000",Senior,7,59,120,10,10,Very High,2,4,16,21/7/2023,Analyzing user data and developing personalized recommendation features,High,5/8/23,4,9
+Samant Chaudhary,212,Male,26,Bachelor,Backend Developer,"1,50,000",Junior,4,20,100,4,7,High,1,4,29,12/4/2023,Develop a secure authentication and authorization system,Medium,30/5/2023,4,50
+Vikram Joshi,213,Male,55,Married,Backend Developer,"3,00,000",Senior,5,56,171,16,7,High,2,7,40,4/7/2023,Design a secure login/ authentication system for the application,High,17/7/2023,4,9
+Harshita Bhardwaj,214,Female,24,Bachelor,Frontend Developer,"1,15,000",Senior,7,20,162,4,7,High,3,4,24,1/10/2023,Designed webpage layouts and other visual elements to enhance website functionality,Medium,7/10/2023,1,5
+Sonia Mehta,215,Female,33,Married,R&D,"1,70,000",Senior,3,57,205,10,7,High,5,4,20,6/6/2023,Design a prototype of a concept to illustrate the customer-facing features by creating a mock-up of the user interface,Medium,16/6/2023,5,9
+Divyansh Gupta,216,Male,32,Married,Backend Developer,"3,10,000",Senior,6,56,204,10,7,High,4,3,34,4/8/2023,Develop a secure customer registration and authentication system,High,11/8/2023,4,4
+Kabir Sharma,217,Male,33,Married,Backend Developer,"3,00,000",Senior,5,55,110,15,7,High,3,4,50,5/12/23,Design a secure network architecture for a fully automated home system,High,15/1/24,4,42
+Manas Karthik,218,Male,42,Married,Backend Developer,"2,80,000",Senior,5,48,206,15,9,High,3,0,44,20/3/2024,Create a highly secure administrative interface which restricts access to confidential company information,High,28/6/2024,4,93
+Aakash Sharma,219,Male,32,Married,Backend Developer,"2,60,000",Senior,7,56,148,11,9,Very High,4,3,45,25/8/2023,Develop document database for long-term efficient storage and retrieval,High,31/8/2023,4,3
+Monica Sharma,220,Female,31,Married,HR,"1,50,000",Senior,4,18,202,7,7,Moderate,3,2,25,17/11/2023,Organize team events to improve employee morale and foster camaraderie,Low,30/12/2023,2,40
+Neha Shukla,221,Female,35,Married,HR,"1,25,000",Senior,3,32,299,10,8,Moderate,1,5,11,19/1/2023,Train new hires in company policies and procedures concerning customer relations,High,21/12/21,2,396
+Yash Arora,222,Male,24,Bachelor,Backend Developer,"1,70,000",Junior,0,48,201,1,7,Moderate,4,3,30,5/4/23,Create an automated system for ticketing and customer support,High,28/4/2023,4,18
+Sadanand Patil,223,Male,32,Married,Backend Developer,"2,60,000",Senior,1,39,145,11,9,High,2,1,45,4/7/23,Develop the backend architecture such as the server and database structures to provide security and scalability,High,18/12/22,4,197
+Riddhi Agarwal,224,Female,32,Married,HR,"1,50,000",Senior,5,30,140,15,9,High,3,3,8,4/9/23,Facilitate the recruitment process and maintain employee records,Medium,11/6/2023,2,86
+Tanya Patel,225,Female,22,Bachelor,Frontend Developer,"1,25,000",Junior,3,15,135,1,8,Moderate,3,2,16,10/2/23,Develop user friendly mobile applications,Medium,21/2/2023,1,10
+Devika Rajan,226,Female,42,Married,HR,"1,20,000",Senior,5,45,132,15,9,Very High,2,4,8,1/9/2023,Set clear compliance expectations for teams and ensure they are communicated and enforced,Medium,16/9/2023,2,16
+Kabir Naik,227,Male,45,Married,Backend Developer,"3,00,000",Senior,3,68,218,22,4,Moderate,2,0,45,19/7/2022,Develop a secure user registration and login system,High,10/8/2022,4,19
+Neel Patel,228,Male,32,Married,Backend Developer,"2,10,000",Senior,7,55,206,9,5,High,4,1,15,1/10/2023,Design and optimize web applications to run on various browsers,High,10/10/23,4,7
+Tina Malhotra,229,Female,55,Married,HR,"1,50,000",Senior,4,26,250,17,3,Low,1,1,9,7/10/2023,Recruiting potential candidates and training new employees,Low,17/9/2023,2,18
+Nitin Joshi,230,Male,45,Married,Backend Developer,"3,00,000",Senior,3,70,156,15,7,High,1,2,45,07/07/0202,Develop an effective system for tracking stock availability,Medium,15/9/2023,4,664732
+Neha Joshi,231,Female,27,Married,Backend Developer,"2,20,000",Senior,4,34,211,5,8,High,1,4,38,9/11/23,Design a secure user registration and login system to enable seamless access to customer's data,High,1/11/23,4,5
+Bhavika Jain,232,Female,45,Married,HR,"1,75,000",Senior,6,28,431,20,6,Moderate,2,2,23,22/10/2023,Conducting regular performance reviews and recommending improvements where needed,High,10/11/23,2,16
+Vidya Iyengar,233,Female,48,Married,HR,"2,00,000",Senior,4,35,135,25,7,High,1,2,5,21/5/2023,Organizing and coordinating employee engagement activities,Medium,24/7/2023,2,67
+Ranveer Singh,234,Male,45,Married,Backend Developer,"3,00,000",Senior,8,58,248,19,7,Very High,5,3,35,7/10/23,Develop a secure user registration and login system,High,15/10/2023,4,5
+Rahul Bose,235,Male,32,Married,Frontend Developer,"1,20,000",Junior,3,21,112,7,7,High,1,0,3,20/4/2023,Implement interactive webpages using HTML and CSS,Medium,25/2/2023,1,53
+Nishant Bajaj,236,Male,48,Married,Backend Developer,"2,80,000",Senior,9,68,343,18,7,Very High,3,3,70,7/7/2023,Create an automated monitoring system for user performance,High,1/8/23,4,20
+Neil Chaudhary,237,Male,30,Married,Backend Developer,"3,25,000",Senior,7,73,56,15,10,Very High,1,2,36,20/9/2023,Implement machine learning algorithms to predict customer transactions,High,21/12/22,4,269
+Nirav Mehta,238,Male,33,Married,Backend Developer,"3,50,000",Senior,1,57,188,9,7,Very High,3,4,40,20/3/2024,Develop an automated heuristics process for user identification,Low,25/3/2024,4,3
+Sonia Verma,239,Female,35,Married,HR,"1,50,000",Senior,5,24,350,14,9,High,3,1,6,25/8/2023,Initiate and organize employee engagement initiatives for maintaining a positive outlook among the team,Medium,20/8/2023,2,6
+Neelima Gupta,240,Female,43,Married,HR,"2,00,000",Senior,3,39,310,15,6,High,3,1,23,3/2/2020,Create a antivirus checking system to identify any malicious files in the user login flow,High,12/3/2023,2,1133
+Neeraj Bhatia,241,Male,43,Married,Backend Developer,"3,00,000",Senior,4,51,189,9,6,Very High,4,4,50,16/12/2023,Design and develop the first-class customer service system to ensure customer satisfaction,High,20/1/2024,4,35
+Sandeep Patil,242,Male,33,Married,HR,"1,30,000",Senior,1,35,216,10,6,High,5,4,9,8/4/2023,Create a flexible employee vacation policy and administer feedback from employees on changes,Medium,11/6/2023,2,63
+Anushka Gupta,243,Female,32,Married,HR,"1,25,000",Senior,9,35,219,7,8,Moderate,4,1,16,10/11/2023,Develop and implement strategies to increase employee morale,Low,15/12/2023,2,30
+Sayantan Banerjee,244,Male,45,Married,Backend Developer,"4,10,000",Senior,9,79,263,18,5,High,2,2,55,30/10/2023,Design and implement database structure for storing and retrieving user data,High,20/12/2023,4,49
+Riya Bansal,245,Female,29,Married,HR,"1,20,000",Senior,7,25,155,9,6,Moderate,3,2,8,12/11/22,Create team processes and handbooks to ensure efficiency and accuracy in the services offered by the team,Medium,20/12/22,2,37
+Radhika Gupta,246,Female,36,Married,Backend Developer,"3,00,000",Senior,6,57,193,15,8,Very High,3,3,45,24/7/2023,Develop and optimize database queries and restructuring of existing models,Medium,25/8/2023,3,35
+Amit Raj,247,Male,35,Married,Backend Developer,"2,50,000",Senior,1,39,212,8,9,Very High,3,3,20,10/10/2023,Design and implement a system to improve the scalability of our service,High,18/11/2023,4,33
+Anushka Chaudhary,248,Female,25,Married,Frontend Developer,"1,50,000",Senior,3,35,167,5,8,High,2,1,30,21/4/2023,Design a personalized user interface for the website that transitions smoothly between different pages and features,Medium,28/4/2023,1,9
+Haider Khan,249,Male,42,Married,Frontend Developer,"1,60,000",Senior,3,35,141,15,7,Very High,1,1,25,2/6/23,Design a user friendly payment gateway,High,15/7/22,4,318
+Rebecca Sharma,250,Female,35,Married,R&D,"2,25,000",Senior,2,57,175,10,10,Very High,1,3,33,12/10/2023,Analyze the latest market trends and technological advances in the field,Medium,7/11/23,5,27
+Hashim Ahmed,251,Male,44,Married,Backend Developer,"4,20,000",Senior,5,55,217,16,6,High,1,3,36,5/7/2023,Design a secure user registration and login system with dynamic capabilities for storing and temporarily retrieving user data,High,15/7/2023,4,9
+June D'Souza,252,Female,33,Married,HR,"1,20,000",Senior,2,23,221,7,9,High,1,3,15,19/10/2023,Develop and implement strategies for well being and mental health workshops for employees,Medium,23/11/2023,2,35
+Garima Ahuja,253,Female,29,Married,Backend Developer,"2,30,000",Senior,2,45,148,11,9,High,2,3,32,9/11/23,Develop and analyze server performance data for possible optimizations,Medium,17/11/2023,1,10
+Rashmi Jobanputra,254,Female,32,Married,Backend Developer,"2,55,000",Senior,8,62,170,11,7,High,4,1,33,20/9/2023,Develop a secure user registration and login system,High,31/8/2023,3,17
+Ritika Verma,255,Female,33,Married,HR,"2,40,000",Senior,4,48,212,11,9,Moderate,3,3,15,20/5/2023,Develop user onboarding flow and feedback collection system,Low,30/5/2023,2,8
+[[Preeti Patel,256,Female,33,Married,Backend Developer,"2,25,000",Senior,3,55,144,11,9,High,3,5,27,16/10/2023,Develop and implement database migration scripts across production environment,High,28/10/2023,4,7
+Ryan Sharma,257,Male,27,Bachelor,Backend Developer,"2,20,000",Senior,4,52,224,5,7,Moderate,3,2,45,15/9/2023,Develop a secure customer authentication system,High,30/10/22,4,319
+Ritu Kumar,258,Female,27,Married,Frontend Developer,"1,60,000",Senior,1,22,185,4,8,Very High,2,4,12,22/2/2023,Design an AI-based chatbot for customer service,Medium,1/4/23,1,42
+Saswata Das,259,Male,55,Married,HR,"2,10,000",Senior,9,56,122,20,6,Moderate,4,5,25,1/10/23,Organizing corporate social responsibility programs for the company,Low,6/11/22,2,327
+Karishma Kapoor,260,Female,28,Married,HR,"1,40,000",Senior,4,45,231,5,9,Very High,2,2,17,6/6/23,Create recruitment system for all categories jobs offered in the company,Medium,13/8/2023,2,65
+Vivek Kaushik,261,Male,35,Married,R&D,"1,70,000",Senior,6,48,180,11,9,High,4,5,10,20/2/24,Analyze and benchmark the tech stack for potential optimizations,High,1/3/24,5,10
+Jimmy Kaur,262,Female,32,Married,HR,"1,50,000",Senior,2,25,232,8,6,High,1,2,8,23/9/2023,Implement a seamless onboarding process for new employees and conduct pre-employment assessments,Medium,28/9/2023,2,6
+Ravina Shah,263,Female,46,Married,HR,"1,50,000",Senior,4,36,195,18,9,Moderate,2,3,18,29/8/2023,Analyse employee data to identify potential areas of improvement and to draw insights,High,24/9/2023,2,22
+Aneesha Manish,264,Female,48,Married,HR,"3,00,000",Senior,3,27,219,14,8,High,2,3,15,16/7/2023,Develop a recognition program to monitor employee progress and engagement,Medium,30/7/2023,2,18
+Neha Joshi,231,Female,36,Married,HR,"1,60,000",Senior,3,44,203,10,9,High,2,2,20,11/10/23,Design a robust employee recruitment program and process,Medium,1/12/22,2,313
+Malini Mahesh,265,Female,55,Married,HR,"1,60,000",Senior,4,48,225,19,6,Very Low,4,3,8,28/11/2023,Develop a comprehensive onboarding program for improving employee engagement and productivity,Medium,28/12/2023,2,28
+Kavya Singh,266,Female,28,Married,HR,"1,50,000",Senior,1,18,225,7,9,High,2,1,15,14/11/2023,Design and implement a performance management system for the organization,Medium,15/12/2023,2,29
+Amita Gupta,267,Female,65,Married,HR,"1,20,000",Senior,10,20,218,15,7,Moderate,4,2,8,5/5/2022,Design and implement traincareer and skill development programs for employees,Low,7/7/2022,2,57
+Chris Kabir,268,Male,45,Married,Backend Developer,"3,00,000",Senior,6,45,256,15,8,High,2,3,7,17/9/2023,Develop a highly secure Business to Business payment transfer system,High,1/10/23,4,10
+Dakshika Mahajan,269,Female,43,Married,HR,"1,25,000",Senior,7,34,223,14,10,Moderate,3,2,15,23/11/2023,Preparation of compensation plans and salary structure,Medium,4/12/23,2,10
+Deepak Meena,270,Male,65,Married,Backend Developer,"6,00,000",Senior,18,150,303,40,4,High,1,4,72,16/6/2023,Design and implement an algorithm for natural language processing of chatbot responses,High,24/9/2023,4,94
+Synthetic record: Deepak Sharma,271,Male,46,Married,Backend Developer,"2,50,000",Senior,8,56,126,15,7,High,3,3,48,5/12/2023,Develop a secure user registration and login system,Medium,13/12/2023,4,7
+Amit Jain,272,Male,33,Married,Backend Developer,"2,80,000",Senior,4,75,220,16,9,Very High,2,5,55,20/5/2023,Develop a secure user registration and login system,High,5/6/2023,4,11
+Priya Verma,273,Female,43,Married,HR,"1,50,000",Senior,7,57,300,14,10,Low,3,2,15,13/10/2023,Design yearly employee performance monitoring system,High,30/10/2023,2,16
+Neha Jain,274,Female,32,Married,HR,"1,40,000",Senior,3,20,231,5,8,Moderate,2,2,18,8/9/2023,Create a comprehensive career path for HR employees,Medium,20/9/2023,2,11
+Anshul Saxena,275,Male,40,Married,Backend Developer,"3,20,000",Senior,8,73,174,16,9,Very High,3,5,43,25/12/2023,Design and implement backend server for AI assistant,High,20/1/24,4,28
+Harish Bhargava,276,Male,64,Married,Backend Developer,"3,85,000",Senior,8,55,220,13,7,Very High,4,6,62,24/1/2024,Create database trigger to automate preparation of regularly processed reports,High,7/3/24,4,39
+Pooja Patel,277,Female,24,Bachelor,Frontend Developer,85000,Senior,0,28,140,5,5,High,1,2,20,17/4/2023,Design navigation menu for a web application,Low,24/6/2023,1,64
+Daniel Fernandez,278,Male,30,Married,Backend Developer,"2,30,000",Senior,8,50,189,10,7,Very High,1,4,45,15/9/2023,Build a scalable customer service system with chatbot integration,High,1/10/2023,4,12
+Atharva Jha,279,Male,26,Bachelor,Frontend Developer,"1,20,000",Junior,3,19,143,5,7,High,3,2,15,20/7/2023,Implement and maintain user analytics systems to track user behavior on the website,Medium,5/8/2023,3,14
+Shikhar Suresh,280,Male,33,Married,Backend Developer,"2,90,000",Senior,3,53,178,8,8,High,2,3,35,5/10/2023,Develop test and debug distributed systems,High,15/10/2023,4,6
+Priyanka Das,281,Female,30,Married,HR,"1,50,000",Senior,2,24,200,7,9,Low,1,3,10,19/08/2023,Connect HR and payroll applications to create automated processes to track employee payroll information,Medium,20/12/2023,2,123
+Neha Joshi,231,Female,43,Married,HR,"2,00,000",Senior,9,56,231,15,8,Very High,4,2,20,29/7/2023,Analyse and strategize employee training and development plans to facilitate ongoing growth in the organization,Medium,15/7/2023,2,14
+Naisha Raj,282,Female,65,Married,HR,"2,40,000",Senior,8,55,139,23,6,High,3,3,28,1/12/2025,Coordinate the onboarding process of new hires including paperwork policy and procedure guides,Medium,11/1/2026,2,46
+Mariya Khalid,283,Female,22,Bachelor,HR,"1,10,000",Junior,4,11,168,3,9,High,4,5,8,5/8/2023,Analyze employee feedback from the customer base to understand user experience and needs,Medium,8/8/2023,2,6
+Nishant Mittal,284,Male,55,Married,Backend Developer,"3,00,000",Senior,8,56,242,14,4,High,2,1,37,19/10/2023,Design a cloud-based architecture for secure and reliable data storage and retrieval,High,25/10/2023,4,4
+Beata Gupta,285,Female,43,Married,HR,"1,50,000",Senior,4,19,294,11,7,High,3,2,15,28/7/2023,Coordinate the recruitment process and to identify areas for improvement,Low,5/11/23,2,94
+Joyce Thomas,286,Female,24,Bachelor,Frontend Developer,"1,20,000",Junior,3,19,186,2,9,High,3,3,17,15/3/2023,Design interactive features and ensure usability on mobile platforms,Medium,22/4/2023,3,38
+Rishabh Joshi,287,Male,24,Bachelor,Backend Developer,"1,60,000",Junior,0,16,137,1,8,Moderate,5,1,15,5/2/24,Design and optimize the system architecture to ensure scalability and responsiveness,Medium,15/3/2024,4,43
+Abhisekh Roy,288,Male,63,Married,Backend Developer,"2,50,000",Senior,5,67,206,17,6,High,3,5,28,3/11/23,Design and implement database structure for storing and retrieving user data,High,28/9/2023,4,31
+Nihaan Chauhan,289,Male,34,Married,Backend Developer,"2,30,000",Senior,4,55,235,11,9,Very High,1,6,25,31/8/2023,Develop an authorization system for secure user authentication,High,17/9/2023,4,11
+Neetu Jain,290,Female,42,Married,HR,"1,50,000",Senior,10,53,133,24,4,Moderate,3,1,8,2/5/2023,Draft policies for employee development,Medium,1/7/2023,2,63
+Jasmine Basu,291,Female,44,Married,HR,"1,20,000",Senior,2,28,262,14,6,Moderate,1,8,20,5/7/2023,Provide advice and guidance to the team on organizational matters and offer guidance for conflicts,Low,15/8/2023,2,36
+Kavya Malik,292,Female,32,Married,HR,"1,35,000",Senior,4,25,154,6,8,Moderate,3,3,20,4/7/2023,Plan and Organize Training and Orientation Programs,High,12/8/2023,2,35
+Timothy John,293,Male,32,Married,Frontend Developer,"1,50,000",Senior,8,24,191,5,6,Moderate,3,2,33,17/10/2023,Develop a responsive UI for a real-time chat application,Medium,27/10/2023,1,14
+Neha Gupta,106,Female,26,Married,HR,"1,25,000",Senior,4,24,218,5,9,High,5,2,10,11/10/23,Create and maintain HR policies and procedures,Medium,15/11/2023,2,33
+John Thomas,294,Male,22,Bachelor,Frontend Developer,"1,20,000",Junior,1,7,297,0,5,Very Low,5,5,11,10/2/2023,Build an innovative web and mobile app for a new ecommerce project,High,1/7/23,1,140
+Ankush Chopra,295,Male,43,Married,Backend Developer,"3,00,000",Senior,8,78,148,15,7,Very High,2,3,35,6/7/2023,Design a complex operating system for budgeting and resource scheduling management,High,13/7/2023,4,2
+Kajol Dutta,296,Female,63,Married,Backend Developer,"2,80,000",Senior,4,55,302,32,2,Low,1,0,68,28/2/2020,Design the database architecture ensuring efficient data storage retrieval and indexing,High,20/4/20,4,47
+Amit Pasricha,297,Male,55,Married,Backend Developer,"2,50,000",Senior,3,60,157,15,5,High,2,1,50,7/10/2023,Develop a secure user registration and login system,High,14/10/2023,4,4
+Abhijeet Ahuja,298,Male,39,Married,Backend Developer,"5,40,000",Senior,2,52,230,15,6,High,1,4,25,5/10/2023,Design and implement an advanced log-in system for premium users,High,24/11/2023,4,45
+Ajay Shah,299,Male,32,Married,HR,"1,50,000",Senior,7,32,179,4,10,High,2,3,9,10/6/23,Responsible for onboarding and training new recruits,Low,18/9/2023,2,96
+Ameena Patel,300,Female,62,Married,HR,"2,50,000",Senior,6,52,213,20,5,Moderate,2,1,4,11/7/2023,Develop employee recognition programs and incentives to raise morale and motivation,Medium,15/7/2023,2,2
+Vishnu Rao,301,Male,57,Married,Backend Developer,"3,50,000",Senior,8,80,217,22,10,Very High,4,2,40,8/6/2023,Develop a secure user registration and login system,High,15/6/2023,4,6
+Neha Ahuja,99,Female,32,Married,HR,"1,25,000",Senior,4,19,256,7,9,Moderate,3,3,15,1/10/23,Reconcile and document employee benefits and monitor trends,Medium,8/11/23,2,36
+Mark Klain,302,Male,29,Married,Backend Developer,"3,50,000",Senior,6,55,212,8,6,Very High,2,2,22,5/2/23,Implement server-side logic and APIs in order to provide authentication and authorization for user access,High,12/3/23,4,36
+Sneha Agarwal,303,Female,60,Married,HR,"4,00,000",Senior,11,89,278,36,8,High,2,4,22,10/9/2023,Develop and execute a hiring plan of the most suitable candidates for the organisation,Low,15/10/2023,2,31
+Aakash Gupta,304,Male,26,Bachelor,Frontend Developer,"1,40,000",Junior,3,25,170,4,10,High,4,2,19,3/7/2023,Design and develop an automated framing system for customer pictures,Medium,18/8/2023,1,43
+Nazia Ali,305,Female,32,Married,HR,"1,30,000",Senior,8,17,253,5,7,High,3,5,11,19/5/2023,Create a workflow management system to streamline the operations of the HR team,Medium,30/7/2023,2,71
+Nirmal Srivastava,306,Male,38,Married,Backend Developer,"2,83,000",Senior,8,57,174,12,7,High,3,3,32,10/4/23,Design database structure for storing and retrieving user data,High,17/7/2023,4,95
+Anuja Gupta,307,Female,37,Married,Backend Developer,"2,40,000",Senior,3,32,234,11,10,Very High,4,2,60,5/2/23,Design and implement a secure authentication system,High,15/3/2023,4,36
+Halima Khan,308,Female,48,Married,HR,"2,70,000",Senior,7,60,261,17,8,Very High,2,4,20,5/5/22,Designing and implementing company-wide employee hiring and onboarding procedures,Medium,15/6/22,2,39
+Akhila Yadav,309,Female,65,Married,Backend Developer,"4,00,000",Senior,2,60,345,18,4,Very High,1,0,28,11/2/23,Design and debug an online payment system assuming all permutations of input are to be processed,High,24/7/2023,4,162
+Nilya Thakkar,310,Female,30,Married,Backend Developer,"3,00,000",Senior,5,62,204,11,6,Very High,1,4,62,8/11/2023,Develop a secure user registration and login system,High,15/12/2023,4,36
+Neha Kapoor,311,Female,30,Married,HR,"1,50,000",Senior,10,120,270,4,8,High,1,1,15,15/12/2022,Organize team building activities to inspire and motivate employees,Low,30/1/2023,2,48
+Rajeev Mathur,312,Male,55,Married,Backend Developer,"3,20,000",Senior,7,53,146,16,6,High,1,3,42,3/10/2023,Design and develop a secure payment gateway for the website,High,11/10/2023,4,5
+Shalini Gupta,313,Female,42,Married,HR,"1,50,000",Senior,6,53,243,10,8,High,3,1,12,15/10/2023,Design processes and procedures to ensure compliance with standards and regulations,Medium,31/10/2023,2,18
+Neela Patil,314,Female,30,Married,HR,"1,32,000",Senior,3,37,176,7,8,Moderate,2,5,25,14/12/2023,Develop a comprehensive training curriculum to orient newcomers and to teach the HR team the latest AI technologies,Low,22/12/2023,2,3
+Rajat Dubey,315,Male,32,Married,Backend Developer,"2,70,000",Senior,6,38,183,16,7,High,2,1,59,5/10/2023,Design and build a user-friendly online platform for queries tasks and customer feedback,High,24/10/2023,4,17
+Jennifer Patel,316,Female,24,Bachelor,Frontend Developer,"1,25,000",Senior,3,33,156,2,7,High,3,2,20,4/7/23,Develop a website for monitoring the progress of active projects,Medium,15/10/22,1,265
+Kanika Gupta,317,Female,39,Married,HR,"1,40,000",Senior,6,24,206,12,8,Moderate,2,6,19,23/11/2023,Prepare quarterly and yearly performance reports of unsalaried employees,Medium,3/12/23,2,10
+Khushi Jain,318,Female,61,Married,HR,"1,40,000",Senior,10,27,224,27,5,Moderate,1,1,25,1/10/23,Develop a professional onboarding system that takes into account employee expected roles and job expectations,High,10/11/22,2,323
+Vishal Jain,319,Male,55,Married,Backend Developer,"2,80,000",Senior,3,66,134,31,5,High,1,0,25,5/1/2024,Develop a streamlined approval process for customer orders,Medium,15/2/2024,4,38
+Priyanka Pandey,320,Female,29,Married,HR,"1,25,000",Senior,2,16,214,5,9,Moderate,4,4,10,5/11/2023,Handle recruitment process for new positions including interviews and onboarding successful candidates.,Medium,15/11/2023,2,14
+Suman Mekhla,321,Female,24,Bachelor,Frontend Developer,"1,25,000",Junior,3,18,209,1,6,High,3,1,10,6/7/23,Design website components for easy user navigation and integration of payment features,Medium,12/7/23,3,10
+Rachel John,322,Female,43,Married,HR,"2,10,000",Senior,7,72,201,18,9,High,4,4,24,11/11/2023,Develop a workflow report to monitor the progress of various projects,Medium,20/11/2023,2,12
+Riya Patil,210,Female,55,Married,HR,"1,00,000",Senior,6,42,173,15,6,Moderate,2,1,16,20/12/2023,Design and implement a workflow for training and promotion of employees,Medium,09/01/24,2,25
+Harini Shah,323,Female,35,Married,HR,"1,50,000",Senior,8,42,189,11,8,High,3,3,8,30/10/2023,Creating onboarding and training programs to new staff in the HR department,Medium,10/11/2023,2,10
+Nikhil Dhawan,324,Male,58,Married,Backend Developer,"2,35,000",Senior,6,78,124,25,5,High,4,2,18,7/4/2023,Develop a comprehensive database for archiving historical records,High,28/4/2023,4,19
+Roshni Sharma,325,Female,25,Married,HR,"1,00,000",Senior,3,13,248,4,7,Very High,1,5,20,17/2/2024,Develop policy on adequate utilization of resources by employees,Medium,12/2/2024,2,7
+Himanshu Pandey,326,Male,42,Married,Backend Developer,"3,00,000",Senior,7,70,127,17,5,Very High,3,4,80,8/9/2023,Develop an intelligent API interface for third party services integration,High,30/10/2022,4,309
+Anuj Verma,327,Male,59,Married,HR,"5,25,000",Senior,8,56,294,28,9,Low,2,4,28,10/1/21,Design and implement a flexible yet effective HR policy for the organization,High,20/1/2021,2,7
+Riya Sharma,174,Female,35,Married,HR,"1,70,000",Senior,7,36,207,17,6,High,1,3,18,17/9/2023,Scheduling and organizing team meetings to review the performance of individual team members,Medium,1/6/2024,2,261
+Naveen Rao,328,Male,42,Married,Backend Developer,"2,80,000",Senior,4,48,212,17,6,High,1,0,40,29/10/2023,Develop efficient algorithms for predicting user behavior,High,10/10/2023,4,14
+Chirag Shah,329,Male,52,Married,Backend Developer,"4,00,000",Senior,4,37,217,15,6,High,1,3,25,1/7/23,Develop a secure user authentication system for user accounts and access control,High,8/9/2023,4,65
+Rashmi Patil,330,Female,32,Married,HR,"1,25,000",Senior,10,37,112,7,9,Moderate,4,2,8,10/11/23,Analyze market feedback to tailor HR services to employee needs,Medium,13/11/2023,2,6
+Aditi Bhatt,331,Female,24,Bachelor,R&D,"1,10,000",Junior,5,6,172,4,7,Moderate,2,4,8,14/10/2023,Develop a data analysis algorithm for financial services industry,High,20/11/2023,5,33
+Nimit Jain,332,Male,37,Married,Backend Developer,"2,25,000",Senior,2,48,129,15,7,High,1,4,49,19/11/2023,Develop a secure API for connecting mobile applications to back-end databases,Medium,20/12/2023,4,30
+Gagan Gupta,333,Male,62,Married,Backend Developer,"2,50,000",Senior,7,59,201,27,1,Very Low,3,4,30,16/11/2023,Design and deploy a custom coding language for web development,High,11/12/23,4,20
+Neelima Malik,334,Female,43,Married,Backend Developer,"3,00,000",Senior,8,84,219,18,5,High,1,4,61,5/11/23,Developing and optimizing algorithms for large datasets to facilitate faster searches,High,15/11/2023,4,8
+Sara Wadhwa,335,Female,32,Married,HR,"1,30,000",Senior,7,42,145,8,4,High,2,3,9,2/3/24,Facilitate transitions and onboarding of new employees,Low,30/4/22,2,667
+Akshay Chaturvedi,336,Male,43,Married,Backend Developer,"3,10,000",Senior,6,42,206,17,6,High,2,4,54,5/12/2023,Develop a secure user registration and login system with improved security protocols,Medium,28/12/2023,4,23
+Neeti Shah,337,Female,44,Married,HR,"2,70,000",Senior,7,87,147,17,5,Moderate,4,2,8,6/8/2023,Prepare surveys for staff evaluating their performance and job satisfaction,Low,24/8/2023,1,14
+Sara Malhotra,338,Female,57,Married,HR,"2,00,000",Senior,3,14,310,25,9,Moderate,4,7,9,4/12/2023,Provide mentoring to other HR colleagues and orienting new recruits to the company's values and policies,Medium,20/12/2023,2,16
+Vivan Dixit,339,Male,35,Married,Backend Developer,"2,20,000",Senior,8,63,196,15,8,High,2,5,40,12/3/2023,Design and implement a secure blockchain network optimized for large-scale data storage and transmission,High,1/4/2023,4,18
+Akash Sharma,340,Male,37,Married,Frontend Developer,"1,60,000",Senior,7,15,34,5,6,High,2,2,10,15/9/2023,Create mobile versions for the software,Medium,27/9/2023,3,15
+Neha Singh,341,Female,36,Married,HR,"1,30,000",Senior,4,19,224,6,9,Moderate,3,3,14,18/10/2023,Design and deliver employee engagement plans and activities to boost morale and motivation,High,25/10/2023,2,5
+Pranay Singh,342,Male,33,Married,Backend Developer,"3,50,000",Senior,4,49,160,12,10,Very High,5,4,35,17/9/2023,Develop webhooks for a microservices based architecture,Medium,30/9/2023,4,11
+Purvi Mehta,343,Female,45,Married,HR,"1,50,000",Senior,8,72,247,17,5,Very High,4,2,30,5/8/2023,Organizing team meetings for progress updates & feedback and providing assistance to team members regarding challenges faced,Medium,18/9/2023,2,44
+Karan Gupta,121,Male,45,Married,Backend Developer,"4,00,000",Senior,6,37,137,15,8,High,2,3,28,08/07/2023,Developing code and logic to provide a secure solution for user authentication and logins,High,15/7/2023,4,2
+Kashyap Jain,344,Male,41,Married,Backend Developer,"3,85,000",Senior,2,56,234,12,7,High,3,2,62,14/7/2023,Develop an API for content management system integration,High,22/7/2023,4,5
+Sanjay Malik,345,Male,57,Married,Backend Developer,"3,30,000",Senior,10,87,211,24,7,Moderate,3,2,45,6/3/24,Develop new feature to improve usability on the mobile application,High,10/5/24,4,59
+Abhay Sharma,346,Male,42,Married,Backend Developer,"2,50,000",Senior,5,50,115,15,7,Very High,3,3,48,1/1/23,Develop a secure user registration and login system,High,30/1/24,4,393
+Kabir Khanna,347,Male,33,Married,Frontend Developer,"1,50,000",Senior,1,7,177,8,6,High,3,2,15,26/8/2023,Develop an AI-driven website for providing tailored solutions,Medium,8/11/23,3,76
+Rahul Mehra,348,Male,60,Married,Backend Developer,"3,45,000",Senior,7,85,232,28,4,Moderate,2,2,22,1/2/2023,Optimize and maintain existing web content to help keep page loading times fast,Medium,15/2/2023,4,17
+Zara Ali,349,Female,33,Married,HR,"1,50,000",Senior,7,25,172,8,6,Moderate,2,3,11,16/7/2023,Create new policies to strengthen workplace safety and privacy measures,Medium,21/8/2023,2,39
+Asish Malik,350,Male,26,Bachelor,Backend Developer,"2,20,000",Senior,2,52,199,6,7,Moderate,4,4,25,25/9/2023,Create a secure data authentication protocol to ensure accurate user data retrievals,Medium,11/10/23,4,14
+Reena Mathur,351,Female,42,Married,HR,"1,25,000",Senior,3,23,136,14,8,High,4,2,9,19/6/22,Plan and execute employee recognition events and rewards for productivity,Low,20/10/2023,2,484
+Ayush Gupta,352,Male,32,Married,Frontend Developer,"1,30,000",Senior,6,32,183,5,8,High,1,2,24,19/9/2023,Developing a user journey aligned with business goals and desired user experience,Medium,27/9/2023,1,7
+Arjun Desai,353,Male,41,Married,Backend Developer,"2,20,000",Senior,5,52,197,11,7,High,2,3,39,06/09/2023,Develop an AI-driven user recommendation and personalization system for the website,High,15/10/2023,4,38
+Krithik Arora,354,Male,25,Bachelor,Frontend Developer,"1,45,000",Senior,5,22,50,4,9,High,2,3,18,3/7/23,Create and optimize the website's navigation and user flow,High,28/7/2023,4,20
+Mukul Ahuja,355,Male,35,Married,Backend Developer,"2,30,000",Senior,10,59,157,11,8,Very High,3,4,48,1/10/2023,Design and implement code to protect against malicious web attacks,Medium,8/10/2023,4,8
+Jenasia Singh,356,Female,35,Married,Backend Developer,"3,50,000",Senior,3,51,215,12,9,Very High,4,2,54,18/5/2023,Develop new features and functions for an existing web application,Low,30/7/2023,4,69
+Rajesh Kaul,357,Male,40,Married,Backend Developer,"3,00,000",Senior,4,56,200,13,6,High,2,8,45,29/8/2023,Develop an Internal Messaging feature for a social media platform,High,1/9/2023,4,1
+Namrata Gupta,358,Female,49,Married,Backend Developer,"2,84,000",Senior,9,62,298,15,8,Very High,1,3,47,22/12/2023,Develop complex algorithms to analyze customer data and generate reports,High,8/1/24,4,20
+Mayank Doshi,359,Male,41,Married,Backend Developer,"2,50,000",Senior,8,50,170,14,6,High,2,4,60,19/7/2023,Design and implement a secure user permission system,High,16/10/2023,4,82
+Gaurav Shah,360,Male,39,Married,Backend Developer,"3,00,000",Senior,8,58,193,17,10,Very High,2,3,40,10/12/2023,Design and implement database structure for storing and retrieving user data,High,17/12/2023,4,5
+Somil Verma,361,Male,28,Married,Frontend Developer,"1,35,000",Senior,3,15,132,5,8,High,2,2,25,21/6/2023,Design a personalized user interface for a web application with innovative design principles,Medium,26/7/2023,1,33
+Mohit Bansal,362,Male,40,Married,Backend Developer,"3,00,000",Senior,10,70,200,20,9,Very High,1,4,48,27/3/2022,Design a secure e-commerce website to collective user data and insights,High,5/4/2022,4,7
+Riddhima Sharma,363,Female,45,Married,HR,"1,80,000",Senior,8,19,197,10,7,High,1,1,17,22/9/2023,Develop performance criteria to rate recruitment processes and review current methods,High,28/9/2023,2,4
+Amita Shah,364,Female,34,Married,Backend Developer,"3,50,000",Senior,7,90,208,11,9,Very High,2,4,44,12/11/23,Create a User Authentication System with secure encryption methods,High,8/11/23,4,2
+Harish Thakkar,365,Male,32,Married,Backend Developer,"2,42,000",Senior,8,60,191,10,7,High,2,5,45,20/5/2023,Develop an API connecting web and mobile applications for synchronization of data,Medium,18/6/2023,4,26
+Ranjeet Gupta,366,Male,28,Married,Frontend Developer,"1,50,000",Junior,2,22,191,5,7,High,2,1,23,22/9/2023,Design a user friendly payment system with maximum security features,High,15/10/2023,1,22
+Neha Kaur,367,Female,32,Married,HR,"1,20,000",Senior,8,20,320,11,8,Low,4,4,8,29/8/2023,Design a compensation and benefits structure for employees,Medium,16/9/2023,2,15
+Parth Khanna,368,Male,62,Married,Backend Developer,"3,60,000",Senior,6,52,253,18,5,High,3,2,36,25/11/2023,Design and implement database structure for storing and retrieving user data,Medium,15/12/2023,4,23
+Riya Jain,119,Female,32,Married,HR,"1,20,000",Senior,4,36,178,8,7,Moderate,1,4,18,20/6/2022,Recruit and screen potential employees and coordinate the onboarding process,Medium,12/10/2022,5,112
+Pratik Chawla,369,Male,35,Married,Backend Developer,"3,00,000",Senior,4,47,151,11,9,Very High,3,3,45,6/10/2023,Design efficient system architecture to enable flexible support of dynamic data with multiple users,High,15/11/2023,4,37
+Arpit Bharadwaj,370,Male,28,Married,Backend Developer,"2,20,000",Senior,2,47,143,8,7,Very High,2,1,34,21/10/2023,Develop a real-time logging system for error monitoring and analytics,Medium,29/10/2023,4,10
+Himanshu Jamaal,371,Male,36,Married,Backend Developer,"3,00,000",Senior,3,54,211,18,9,Very High,3,5,45,10/10/2023,Enhance the security of online payments and transactions,High,7/11/2023,4,23
+Garima Rana,372,Female,33,Married,HR,"1,20,000",Senior,4,14,124,6,9,Very High,3,5,10,17/5/2023,Design and implement a rewards program for employees,Medium,27/6/2023,2,44
+Ankur Singh,373,Male,62,Married,Backend Developer,"4,00,000",Senior,3,16,198,20,4,Very High,3,8,85,25/5/2023,Develop complex data models and architecture frameworks for machine learning algorithms,High,15/7/22,4,311
+Shweta Kapoor,374,Female,60,Married,HR,"1,50,000",Senior,7,17,295,21,5,Moderate,2,4,23,27/8/2023,Coordinate meetings with the upper management to discuss the essential requirements of the organization such as recruitment and training,Low,15/9/2023,2,14
+Neha Verma,147,Female,31,Married,Frontend Developer,"1,15,000",Senior,5,22,178,8,7,High,3,1,11,14/6/2023,Design a database structure optimized for fast data retrieval and updating,Medium,17/7/2023,1,34
+Robbie Chaudhry,375,Male,42,Married,Backend Developer,"3,00,000",Senior,6,66,221,18,9,High,3,4,54,23/11/2023,Design and launch data models with reducded time complexity and increased hardware efficiency,High,14/12/2023,4,20
+Sanjeev Kumar,376,Male,44,Married,HR,"3,50,000",Senior,2,47,213,19,8,Moderate,1,4,17,25/10/2023,Schedule meetings and conferences and mentor junior employees,High,31/12/2023,2,63
+Hemant Jain,377,Male,45,Married,Backend Developer,"3,00,000",Senior,1,70,162,12,8,High,2,4,23,5/11/2023,Design and implement a highly secure login system for customer users,High,20/11/2023,4,11
+Kamal Verma,378,Male,33,Married,Backend Developer,"2,50,000",Senior,1,57,130,12,7,Moderate,2,4,40,24/5/2023,Design a system to collect customer feedback and ranking on a scale of 1 to 5 accordingly,Medium,1/12/22,4,180
+Shruti Patil,379,Female,29,Married,HR,"1,20,000",Senior,7,33,193,5,9,High,3,1,8,22/6/2023,Prepare an analysis of the company's employee productivity and suggest new development goals,Medium,25/7/2023,2,37
+Anshul Mehta,380,Male,29,Married,Backend Developer,"2,35,000",Senior,8,51,166,7,7,High,3,5,28,10/12/2023,Develop an automated performance evaluation system to detect and report anomalies in the system,High,15/1/2024,4,35
+Vivek Jaiswal,381,Male,33,Married,Backend Developer,"3,50,000",Senior,8,51,154,10,9,Very High,4,5,36,21/6/2023,Design and implement database structure for storing and retrieving user data,High,29/6/2023,4,6
+Steven Jones,382,Male,48,Married,Backend Developer,"2,80,000",Senior,8,63,237,15,10,High,2,4,50,9/9/23,Design and implement a comprehensive data structure for a large database related to user data,High,15/11/22,4,294
+Sana Khan,383,Female,30,Married,HR,"1,25,000",Senior,10,17,214,8,7,High,1,4,17,22/10/2023,Conduct employee performance surveys to measure productivity and feedback,Low,28/10/2023,2,2
+Neha Jain,274,Female,36,Married,HR,"1,50,000",Senior,6,20,190,4,7,High,3,4,10,7/9/2023,Coordinate in-depth customer interviews to assess user preferences and requirement,Medium,7/10/2023,2,30
+Nina Sharma,384,Female,32,Married,HR,"1,20,000",Senior,4,22,324,7,8,High,1,2,8,18/10/2023,Develop a training manual for customer service agents,Medium,26/12/2023,2,66
+Viraj Jain,385,Male,24,Bachelor,Frontend Developer,"1,05,000",Senior,3,32,154,5,8,Very High,4,5,23,19/8/2023,Design mobile application interfaces and improve customer experience,Medium,10/9/2023,1,19
+Gaurav Kumar,151,Male,55,Married,Backend Developer,"2,80,000",Senior,5,51,184,10,8,High,3,3,52,11/9/2023,Create a secure API for external integrations,High,15/10/2023,4,33
+Sumedh Rao,386,Male,65,Married,R&D,"2,50,000",Senior,5,42,236,17,4,Moderate,3,3,28,31/8/2023,Develop a predictive user flow analysis tool for website visitors,Medium,19/10/2023,5,47
+Aniket Singh,387,Male,28,Married,Frontend Developer,"1,25,000",Senior,3,32,187,8,7,High,2,1,25,29/8/2023,Design the user interface and user experience to ensure easy navigation and usage,Medium,19/9/2023,1,24
+Anushka Tiwari,388,Female,22,Bachelor,R&D,"1,10,000",Junior,2,6,245,1,9,Moderate,1,2,5,17/8/2023,Perform a network security audit to identify potential vulnerabilities,High,23/9/2023,5,35
+Nisha Sharm,389,Female,36,Married,HR,"1,25,000",Senior,8,53,227,10,9,High,1,2,20,25/9/2023,Develop training plans to help employees acquire the required skills and competencies for their jobs,Medium,10/12/23,2,78
+Sonia Sharma,390,Female,27,Married,Frontend Developer,"1,50,000",Senior,3,32,174,5,7,High,2,3,22,11/10/23,Develop a user dashboard for a revenue tracking system,Medium,19/10/2023,1,5
+Neha Sharma,391,Female,45,Married,HR,"2,50,000",Senior,8,46,308,18,9,High,4,5,15,1/1/24,Initiate and monitor strategies to foster team morale and provide support for employees,Low,10/1/24,2,5
+Veer Sharma,392,Male,61,Married,Backend Developer,"4,50,000",Senior,9,88,239,28,1,Low,5,8,55,11/10/23,Develop a secure user registration and login system,High,28/11/2023,4,45
+Seyyed Abdullah,393,Male,39,Married,Frontend Developer,"1,50,000",Senior,2,30,233,8,7,High,4,4,40,10/10/2023,Design and develop multimedia content for website,Medium,18/10/2023,4,12
+Dan Alvarado,394,Male,42,Married,Backend Developer,"2,60,000",Senior,8,70,164,12,8,Very High,1,2,45,19/10/2023,Design develop and implement optimized database queries to retrieve relevant data from large datasets,High,29/10/2023,4,9
+Raman Sharma,395,Male,44,Married,Backend Developer,"3,30,000",Senior,7,72,151,17,4,Moderate,1,3,49,20/7/2023,Develop a customer feedback capture system,High,15/8/2023,4,20
+Neha Sharma,391,Female,25,Married,HR,"1,00,000",Junior,3,15,225,3,8,Moderate,3,3,16,21/9/2023,Writing a detailed report about the benefits of adopting certain AI technologies for the company,Medium,29/9/2023,2,6
+Nitin Agarwal,396,Male,35,Married,Backend Developer,"2,64,000",Senior,3,35,190,12,8,High,1,5,28,13/4/2023,Develop a secure and dynamic user authentication system for optimized login customization,High,25/5/2023,4,37
+Gaurav Jain,397,Male,33,Married,Backend Developer,"2,70,000",Senior,5,60,176,8,7,High,4,3,55,3/11/2023,Develop a secure user registration and login system,High,10/11/2023,4,4
+Omkar Jain,398,Male,53,Married,Backend Developer,"2,50,000",Senior,8,55,218,20,7,High,2,2,49,30/8/2023,Create a comprehensive dashboard for displaying status of all running projects at a glance,High,10/9/2023,4,6
+Neeraj Chandra,399,Male,40,Married,HR,"1,15,000",Senior,6,28,155,1,8,Very High,5,3,20,22/7/2023,Facilitate regular team meetings and review sessions for better workplace productivity,Medium,7/8/23,2,14
+Ayush Ahuja,400,Male,43,Married,Backend Developer,"3,00,000",Senior,7,55,176,16,8,High,1,4,42,25/10/2023,Develop a secure and robust system for handling user interactions and state changes,High,7/11/23,4,11
+Geetika Ahuja,401,Female,35,Married,Backend Developer,"2,50,000",Senior,8,65,197,15,9,Very High,4,4,45,6/12/23,Develop a robust payment structure to securely transport and store customer data,High,15/1/24,4,43
+Mihir Garg,402,Male,29,Married,Frontend Developer,"1,25,000",Junior,1,30,124,5,7,High,3,2,21,8/10/2023,Design the user interface and user experience to ensure easy navigation and usability,Medium,14/11/2023,1,35
+Priyanka Singh,403,Female,28,Married,Frontend Developer,"1,40,000",Senior,4,33,204,8,7,High,2,4,25,17/10/2023,Develop a secure user registration and login system for the web application,High,1/11/2023,3,10
+Mukul Jha,404,Male,38,Married,Backend Developer,3200000,Senior,8,76,196,16,7,Very High,1,2,40,18/11/2023,Design a secure web application architecture for protection against external threats,High,25/12/2023,4,35
+Sakshi Dwivedi,405,Female,37,Married,HR,"2,20,000",Senior,9,62,167,10,10,High,1,5,11,24/8/2023,Create a HR database for tracking employee development and progress,Medium,14/9/2023,2,24
+Manish Verma,406,Male,48,Married,Backend Developer,"3,25,000",Senior,2,54,191,15,6,High,1,4,37,8/3/2024,Develop a secure user authentication system,Low,13/9/2024,4,184
+Kritika Ahuja,407,Female,33,Married,Backend Developer,"2,60,000",Senior,2,32,134,15,7,Very High,1,5,28,18/7/2023,Troubleshoot existing product issues and consult the development team on necessary fixes and improvements,High,15/7/2023,4,-1
+Shweta Gandhi,408,Female,63,Married,HR,"1,90,000",Senior,8,24,220,20,4,Moderate,4,6,15,30/7/2023,Demonstrate effective communication to inspire and motivate the team,Low,15/8/2023,2,11
+Roma Sinha,409,Female,38,Married,HR,"1,30,000",Senior,2,19,210,10,8,Moderate,2,3,25,5/7/2023,Coordinate with the development team for the latest technological updates and bug fixes,Medium,15/8/2023,2,39
+Aamir Khan,410,Male,24,Bachelor,Frontend Developer,"1,15,000",Junior,2,23,161,4,7,Moderate,3,4,20,22/11/2023,Create custom textures for 3D assistance,Low,29/11/2023,3,5
+Lucas Verma,411,Male,32,Married,Backend Developer,"3,80,000",Senior,5,38,288,14,5,High,1,3,68,17/10/2023,Design and integrate payment system into a website ensuring secure and safe online payments,High,24/12/2023,4,64
+Priyanka Jain,412,Female,31,Married,HR,"1,20,000",Senior,1,16,250,10,7,High,2,4,15,5/6/2023,Develop job descriptions to be included in job postings,Medium,10/6/23,2,5
+Hermann Singh,413,Male,44,Married,Backend Developer,"3,10,000",Senior,7,56,158,11,7,High,2,1,48,21/10/2023,Design and develop a secure online marketplace,High,15/10/22,4,368
+Gaurav Verma,414,Male,56,Married,Backend Developer,"3,00,000",Senior,1,47,120,16,7,High,2,4,60,8/1/2024,Implementing a secure user authentication and authorization system,High,1/3/2024,4,50
+Zoya Sahil,415,Female,27,Married,Frontend Developer,"1,50,000",Senior,2,35,117,5,9,High,2,0,16,8/10/23,Design validations and UI features to ensure efficient data entry from system users,Medium,24/10/2023,1,17
+Myra Roy,416,Female,33,Married,HR,"1,40,000",Senior,4,25,174,8,7,Moderate,3,3,16,3/10/2023,Plan recruitment campaigns and other initiatives and processes that support the company's hiring needs,Medium,15/11/2023,2,45
+Jeet Rai,417,Male,28,Married,Backend Developer,"2,25,000",Senior,2,49,211,8,7,High,2,2,24,8/10/2023,Design and improve core features of a specific web framework,High,16/9/2023,3,20
+Kartik Joshi,418,Male,23,Bachelor,HR,"60,000",Junior,2,24,205,1,7,Moderate,5,1,14,1/9/2023,Design a performance assessment tool for evaluating employee performance,Medium,5/11/22,2,305
+Wajid Abdulfatah,419,Male,36,Married,Backend Developer,"3,00,000",Senior,4,68,181,14,7,Very High,3,3,25,20/8/2023,Construct an AI-driven project management solution allowing for easy tracking of tasks and providing efficient workflow,Medium,25/8/2023,4,8
+Shweta Yadav,420,Female,29,Married,HR,"1,20,000",Senior,5,23,212,10,8,Moderate,1,2,15,10/10/2023,Designing a training program to equip the team with the necessary skills to maintain the operations.,Medium,19/10/2023,2,9
+John Patterson,421,Male,39,Married,Backend Developer,"3,05,000",Senior,8,90,250,15,8,Very High,2,4,42,7/7/2023,Design and implement secure API protocols for connecting between different web applications,High,31/7/2023,4,19
+Johnathon Smith,422,Male,52,Married,Backend Developer,"6,00,000",Senior,3,66,228,20,4,Very High,1,2,57,9/7/2023,Create a system for logging user requests and connecting them to the respective departments,High,25/7/2023,4,14
+Chloe Brown,423,Female,57,Married,Backend Developer,"3,50,000",Senior,9,57,117,17,7,High,2,5,23,21/9/2023,Design highly secure payment gateway architecture for automated digital transactions,High,30/9/2023,4,7
+Mihir Shah,424,Male,38,Married,Backend Developer,"2,20,000",Senior,6,70,192,14,8,High,2,3,44,23/5/2023,Create APIs for a Microservices based architecture,High,15/5/2024,4,356
+Mahek Gupta,425,Female,40,Married,Frontend Developer,"1,60,000",Senior,8,30,132,11,5,Low,4,2,18,20/7/2023,Improve the performance of website and reduce loading time by optimizing images and scripts,Medium,5/8/2023,1,18
+Vikash Yadav,426,Male,40,Married,Backend Developer,"2,50,000",Senior,3,51,201,18,7,Moderate,3,4,43,10/10/2023,Develop a secure payment processing system for customers,High,15/10/2023,4,2
+Ritika Gupta,427,Female,27,Married,Backend Developer,"2,30,000",Senior,1,104,152,4,10,Very High,2,4,27,11/10/2023,Design and implement algorithms for data extraction from multiple sources,High,19/11/2023,4,33
+Aakash Mehta,428,Male,59,Married,Backend Developer,"3,90,000",Senior,7,59,135,20,7,High,4,4,34,5/9/2023,Create a secure server infrastructure to prevent malicious cyber-attacks,High,20/9/2023,4,11
+Navya Patel,429,Female,24,Bachelor,HR,"1,10,000",Junior,0,9,227,2,9,Moderate,3,5,18,26/5/2023,Develop strategies and plans for team training and promoting continued learning and development,Medium,1/6/23,2,6
+Bhavya Kapoor,430,Female,34,Married,Frontend Developer,"1,63,000",Senior,3,20,176,5,7,High,3,4,31,8/7/2023,Develop a system for automated and secure customer logins,Medium,15/7/2023,1,7
+Ankit Verma,431,Male,35,Married,Backend Developer,"2,25,000",Senior,5,55,172,10,8,High,2,4,42,4/9/2023,Develop secure payment gateway integration,Medium,15/11/2023,4,72
+Vibha Kapoor,432,Female,45,Married,Frontend Developer,"1,60,000",Senior,3,40,149,12,9,Very High,2,2,20,12/10/2023,Design the user interface and user experience to ensure easy navigation and usage,Medium,27/10/2023,1,18
+Atharva Mehra,433,Male,40,Married,Backend Developer,"2,60,000",Senior,3,56,167,15,9,Very High,1,4,60,9/7/2023,Design database architecture for secure user authentication,High,14/8/2023,5,34
+Sujata Basu,434,Female,32,Married,Frontend Developer,"77,000",Senior,1,41,210,12,7,High,1,4,33,10/10/2023,Design UI mockups for the mobile web application to ensure the features and functionalities are as per requirement,Low,15/10/2023,1,4
+Nevaeh Singh,435,Female,35,Married,HR,"1,70,000",Senior,10,59,227,16,7,High,4,4,9,5/7/2023,Develop company policies and promote risk management activities,High,10/8/2023,2,34
+Sumit Agrawal,436,Male,46,Married,Backend Developer,"4,20,000",Senior,10,94,178,12,7,High,3,2,40,28/11/2023,Design a system for monitoring and analyzing user behavior and collecting data insights to optimize user experience,Medium,5/12/2023,4,6
+Anjali Verma,437,Female,35,Married,HR,"1,50,000",Senior,7,12,187,15,7,Low,2,3,6,5/10/2023,Train and orient newly hired HR personnel to efficiently administer the organization's policies and procedures,Low,3/11/2023,2,23
+Sonali Khan,438,Female,45,Married,HR,"2,25,000",Senior,2,33,247,20,6,Moderate,4,3,16,22/7/2023,Design and implement a communication strategy that meets the need of the organization,Medium,15/8/2023,2,23
+Nina Shah,439,Female,32,Married,HR,"2,30,000",Senior,6,63,288,12,8,High,4,2,16,29/8/2023,Regularly review the performance of the HR team to ensure objectives are met,Medium,5/9/2023,2,10
+Rahul Shah,440,Male,61,Married,Backend Developer,"4,50,000",Senior,3,65,230,24,8,Very High,2,1,75,22/10/2023,Develop a highly secure authentication system for mission-critical user interactions,High,18/11/2023,4,24
+Hari Patel,441,Male,42,Married,Frontend Developer,"1,30,000",Senior,6,36,196,15,7,High,4,2,19,5/6/23,Design a cloud-based application for remote collaboration among enterprise teams,High,15/9/2023,5,99
+Ashmita Ghosh,442,Female,59,Married,HR,"2,00,000",Senior,8,57,254,15,3,Low,4,5,8,4/5/2023,Develop a comprehensive reporting system summarizing employee performance metrics,Medium,16/8/2023,2,103
+Karan Mehra,443,Male,27,Bachelor,Frontend Developer,"1,50,000",Senior,7,19,230,2,8,High,2,1,25,17/9/2023,Design interactive landing page for promotional campaigns,Medium,11/10/2023,1,22
+Shriya Gupta,444,Female,28,Married,Frontend Developer,"1,60,000",Senior,4,33,122,5,9,Very High,3,2,20,25/7/2023,Design a website to streamline customer queries and transactions,High,15/8/2023,1,17
+Rahul Gupta,445,Male,35,Married,Frontend Developer,"1,60,000",Senior,5,31,126,9,6,High,1,1,21,8/10/2023,Develop an automated system to manage employee records,Medium,2/10/2023,1,10
+Nikita Chopra,446,Female,27,Married,HR,"1,20,000",Senior,5,38,236,11,9,High,4,3,22,5/11/2023,Develop strategies for attracting managing and retaining staff,Medium,20/11/2023,2,15
+Jacob Wilson,447,Male,35,Married,Frontend Developer,"1,50,000",Senior,4,27,175,8,8,High,2,2,25,19/7/2023,Create a custom dashboard interface for users to monitor their account and usage data,Medium,2/8/2023,1,16
+Manoj Bajaj,448,Male,39,Married,Frontend Developer,"1,45,000",Senior,4,32,151,10,7,High,2,2,24,14/10/2023,Implement a system for real-time user feedback assessment,Medium,21/10/2023,2,6
+Uma Srivastva,449,Female,32,Married,HR,"1,35,000",Senior,3,15,231,6,8,High,2,2,22,20/9/2023,Coordinating onsite training activities for tool rollout,Medium,6/10/2023,2,15
+Neha Gupta,106,Female,45,Married,HR,"2,30,000",Senior,7,89,202,17,6,High,1,5,18,4/4/2023,Creating human resource policies and procedures for the company,Medium,15/6/2023,2,70
+Sonia Gupta,450,Female,25,Married,HR,"1,25,000",Senior,3,25,196,5,9,High,2,2,10,25/6/2023,Orient new employees in the organization by providing detailed information and training,Medium,2/7/23,2,10
+Neha Gupta,106,Female,32,Married,HR,"2,50,000",Senior,8,22,284,7,9,High,2,3,17,8/2/2023,Manage and plan the recruitment process ensuring strong employees enter the company,Medium,17/3/2023,2,40
+Feroz Alam,451,Male,33,Married,Backend Developer,"2,30,000",Senior,3,28,195,8,9,Very High,3,4,40,19/12/2023,Design and implement a data analysis pipeline by optimizing the performance of statistical algorithms,High,7/1/2024,4,19
+Neeti Singh,452,Female,40,Married,HR,"1,52,000",Senior,7,75,195,16,8,High,3,3,10,28/10/2023,Assist in the recruitment process by interviewing prospects and evaluating talents,Medium,15/11/2023,2,17
+Manik Kapoor,453,Male,33,Married,Backend Developer,"2,80,000",Senior,5,55,144,11,7,High,1,3,56,11/10/23,Design a secure user registration and login system with additional authentication features such as fingerprint and FaceID,High,17/12/2023,4,62
+Jack Thomas,454,Male,40,Married,Backend Developer,"3,00,000",Senior,7,60,228,14,6,Very High,2,2,48,5/7/2023,Design a secure payments system for the website with firewalls and encryption,High,25/8/2023,4,47
+Vivek Singh,455,Male,33,Married,Frontend Developer,"1,30,000",Senior,3,27,137,7,8,High,3,3,21,21/12/2023,Create a library of user interface elements to ease the development of UI designs,Medium,10/1/24,1,23
+Viraj Thakur,456,Male,31,Married,Backend Developer,"2,25,000",Senior,5,29,209,11,10,Very High,1,3,60,5/12/2023,Develop efficient algorithms for web-application-based decision-making processes,High,28/2/2024,4,87
+Neel Chauhan,457,Male,33,Married,Frontend Developer,"1,57,000",Senior,6,31,162,10,7,High,2,3,15,6/10/2023,Develop responsive UX architecture to optimize page load times and reduce resource consumption,Medium,20/10/2023,3,17
+Nikhil Sharma,458,Male,38,Married,Backend Developer,"3,50,000",Senior,6,53,165,9,6,High,1,3,59,25/5/2023,Develop an efficient prediction model for customers using latest AI technologies,High,10/6/2023,4,11
+Roshani Parikh,459,Female,55,Married,R&D,"1,75,000",Senior,4,56,206,7,8,High,2,3,9,13/3/2023,Research new AI technologies that could be beneficial to production process,High,20/5/2023,5,64
+Aditya Prasad,460,Male,30,Married,Frontend Developer,"1,90,000",Senior,1,18,164,8,7,Moderate,4,4,16,20/9/2023,Design the user interface and user experience to ensure easy navigation and usage,Medium,15/10/2023,1,23
+Kiran Bhatia,461,Female,58,Married,HR,"3,00,000",Senior,8,0,261,15,8,Moderate,2,1,20,2/3/2024,Leading team projects track project progress and coordinating with different recruitment teams,Low,25/4/2024,2,52
+Patrick Miller,462,Male,33,Married,Backend Developer,"2,00,000",Senior,10,50,210,9,7,High,1,2,40,27/5/2023,Build and maintain an scalable web-crawling system,High,20/7/2023,4,51
+Neelam Arora,463,Female,43,Married,HR,"1,70,000",Senior,8,52,299,19,7,High,2,5,11,22/9/2023,Developing recruitment processes and strategies for the organization to attract the right talent,Medium,15/10/2023,2,24
+Kanika Sharma,464,Female,43,Married,HR,"1,90,000",Senior,8,50,223,14,5,Low,2,3,16,25/12/2023,Compiling team reports and presenting them to upper management,Low,4/1/24,2,10
+Sharmila Singh,465,Female,42,Married,HR,"1,90,000",Senior,6,60,306,16,8,High,5,4,23,3/9/2023,Devise a system for tracking and compensating overtime hours,High,13/9/2023,2,5
+Iqra Rahman,466,Female,22,Bachelor,HR,"88,000",Junior,3,8,166,1,7,Moderate,2,1,6,18/7/2023,Assist with preparations for company events,Low,26/9/2023,2,64
+Robyn Srivastava,467,Female,44,Married,HR,"1,75,000",Senior,8,44,121,17,7,Moderate,3,4,4,02/07/22,Schedule meetings and other events as needed,Low,01/07/23,2,361
+Gulshan Raj,468,Male,54,Married,Backend Developer,"4,30,000",Senior,8,75,151,19,6,Very High,4,2,40,25/7/2023,Design and develop an effective system for boosting back end speed,High,05/10/23,4,69
+Reena Agarwal,469,Female,33,Married,HR,"1,60,000",Senior,4,20,188,4,9,High,3,3,8,27/9/2023,Coordinating recruitment efforts to hire potential candidates,Medium,30/10/2023,2,34
+Nandini Sinha,470,Female,45,Married,HR,"2,00,000",Senior,9,121,137,16,6,Low,4,2,14,5/7/2023,Scheduling meetings and events for the entire organisation,Medium,7/8/2023,2,30
+John Brown,471,Male,57,Married,Backend Developer,"2,45,000",Senior,2,67,203,19,5,High,1,2,59,9/5/2023,Design and implement database structure for storing and retrieving user data,Medium,1/6/2023,4,25
+Neha Madaan,472,Female,30,Married,HR,"1,20,000",Senior,8,20,251,5,7,Moderate,3,2,10,15/11/2023,Scheduling and maintaining staff record information and making sure employees adhere to company policies,High,25/11/2023,2,5
+Tanvi Raj,473,Female,31,Married,HR,"1,80,000",Senior,8,32,175,10,7,Very High,3,2,12,2/9/23,Develop employee hiring and recruitment strategy for the organization,Medium,12/11/23,2,71
+Neha Sharma,391,Female,29,Married,HR,"2,00,000",Senior,4,24,260,5,7,Moderate,4,0,15,21/8/2023,Organize company events and meetings for boosting the team morale,Low,28/8/2023,2,3
+Yash Gupta,474,Male,47,Married,Backend Developer,"3,00,000",Senior,10,51,247,17,5,High,1,2,25,8/6/2023,Design and implement efficient distributed system architecture for cloud computing,High,14/9/2023,4,91
+Ritika Sinha,475,Female,28,Married,HR,"1,35,000",Senior,4,16,218,6,8,Moderate,3,3,18,28/2/2023,Design and implement customized company-wide employee appraisal frameworks,High,01/03/2023,2,-2
+Stephanie Jones,476,Female,29,Married,Backend Developer,"2,25,000",Senior,4,52,183,10,7,High,2,1,48,14/6/2023,Create a secure user authentication system,Medium,21/9/2023,4,99
+Anjali Shah,477,Female,65,Married,HR,"1,00,000",Senior,7,33,272,14,7,Moderate,2,2,18,15/10/2023,Strategize and establish effective engagement programs for retaining and rewarding the best talent,Medium,20/11/2023,2,37
+Neha Bajaj,478,Female,42,Married,HR,"1,50,000",Senior,5,39,130,15,9,High,2,4,15,7/12/2023,Conduct research and recommend suitable IT products to meet company needs and requirements,Medium,15/1/24,2,43
+Shikhar Gupta,479,Male,42,Married,Frontend Developer,"1,25,000",Senior,2,30,173,8,7,Low,4,1,20,15/11/2023,Enhance overall website performance and usability features,Medium,25/11/2023,1,10
+Himanshu Gupta,480,Male,57,Married,Backend Developer,"2,90,000",Senior,8,51,281,24,7,High,4,4,18,2/10/2023,Develop a customer-centric responsive web application,High,13/11/2023,4,36
+Arjun Jain,481,Male,45,Married,Backend Developer,"2,75,000",Senior,8,70,182,13,9,Very High,5,3,30,19/10/2023,Create and update database scripts to automate various processes,High,12/12/23,4,52
+Anjali Sharma,482,Female,34,Married,Frontend Developer,"1,50,000",Senior,8,48,253,8,7,High,2,3,25,18/11/2023,Design and develop a website prototype that translates the visual design into a responsive UI,High,24/12/2023,1,35
+Rafay Khan,483,Male,35,Married,Backend Developer,"2,45,000",Senior,5,55,222,7,9,High,2,4,47,5/7/2023,Develop automated solutions to detect and prevent malicious activities,High,15/8/2023,4,39
+Neel Pandey,484,Male,37,Married,Backend Developer,"2,80,000",Senior,5,55,216,10,6,Moderate,3,3,33,25/4/2023,Design a secure authentication system for verifying user identities,High,1/7/2023,4,61
+Riya Patel,485,Female,29,Married,HR,"1,75,000",Senior,7,60,269,7,6,High,4,4,16,5/12/23,Make and implement recruiting strategies to provide a continuous flow of qualified candidates,Medium,12/1/24,2,41
+Rahul Mehta,486,Male,59,Married,Backend Developer,"3,50,000",Senior,7,68,178,19,5,High,1,1,40,20/10/2023,Design an algorithm for automatically redirecting visitors based on their location,High,15/11/22,4,336
+Sanjana Sharma,487,Female,55,Married,HR,"2,50,000",Senior,9,89,254,13,6,High,2,4,15,27/9/2023,Provide advice and guidance on personnel related issues such as recruitment compensation benefits and grievances,Medium,13/10/2023,2,16
+Rani Agarwal,488,Female,34,Married,HR,"1,10,000",Senior,5,38,215,8,10,Very High,3,4,25,18/2/2024,Monitor performance of development teams and recommend areas of improvement to maximize efficiency and output,Medium,20/4/2024,2,65
+Jeet Singh,489,Male,25,Bachelor,Backend Developer,"1,70,000",Junior,5,16,148,4,8,High,4,4,19,1/10/23,Design and analyze the data retrieval architecture to store and analyze user behavior for targeted insights,High,15/9/2023,4,12
+Neha Jain,274,Female,44,Married,HR,"1,30,000",Senior,2,35,232,12,7,High,1,3,18,22/3/2023,Recruiting and interviewing potential candidates for new team positions,Low,28/3/2023,2,5
+Carlos Rodriguez,490,Male,42,Married,Backend Developer,"3,25,000",Senior,7,55,152,18,3,Very High,4,3,40,14/9/2023,Develop the architecture of a system for retrieving and storing user data,High,30/10/2023,5,45
+Kamal Shah,491,Male,58,Married,HR,"1,20,000",Senior,7,22,174,15,6,Moderate,2,4,25,21/7/2023,Design and create training and development programs for employees,Medium,25/7/2023,2,5
+Nidhi Verma,492,Female,40,Married,Backend Developer,"3,00,000",Senior,2,56,254,15,10,Very High,4,6,60,6/10/2023,Construct the application architecture and build the necessary components with modern secure coding practices,High,20/12/2023,4,71
+Sanjana Rai,493,Female,58,Married,HR,"1,20,000",Senior,6,56,304,22,5,Moderate,3,1,26,8/7/2023,Assist in the recruitment process and coordinate interviews,Medium,15/7/2023,2,9
+Lavanya Gupta,494,Female,36,Married,Backend Developer,"2,80,000",Senior,7,55,132,15,9,Very High,2,4,40,30/8/2023,Develop an AI-driven system to recognize customer preferences and automate product suggestions,High,30/9/2023,4,27
+Amrita Sengupta,495,Female,35,Married,R&D,"1,70,000",Senior,8,51,292,10,6,Moderate,3,5,28,10/7/2023,Research the potential for integrating blockchain technology with current inventory management systems,High,30/9/2023,1,78
+Utkarsh Verma,496,Male,24,Bachelor,Backend Developer,"2,00,000",Senior,3,61,167,5,5,High,1,2,25,5/6/23,Design distributed software to be used for updating machine learning models,High,13/10/2023,4,126
+Devika Verma,497,Female,25,Married,HR,"1,20,000",Senior,3,24,201,4,7,High,1,5,15,15/8/2023,Design a comprehensive employee training program,Medium,14/10/2023,2,62
+Avinash Dutt,498,Male,45,Married,Backend Developer,"3,75,000",Senior,4,73,240,20,7,High,3,3,40,21/11/2023,Design and create a custom portfolio tracking system for the company,Medium,25/11/2023,4,7
+Ishani Anand,499,Female,30,Married,HR,"1,50,000",Senior,3,23,210,7,8,High,5,2,14,28/7/2023,Coordinating training sessions for the development team regarding the latest AI technologies and web development practices,Medium,20/7/2023,2,10
+Neha Pradeep,500,Female,22,Bachelor,Frontend Developer,"1,20,000",Junior,1,10,100,2,7,Moderate,4,2,8,5/10/23,Create user friendly web design to ensure easy navigation for customers,Low,8/10/2023,1,1
+Simran Joshi,501,Female,34,Married,HR,"1,35,000",Senior,1,24,221,6,9,High,1,2,19,14/7/2023,Developing employee show case and inter-department communication channels,Medium,30/8/2023,2,48
+Kartik Kharbanda,502,Male,37,Married,Backend Developer,"3,50,000",Senior,5,57,204,12,9,High,3,4,49,20/12/2023,Develop API for fetching user activity and integrating with external systems,High,8/1/24,4,22
+Durgesh Das,503,Male,43,Married,HR,"2,00,000",Senior,3,24,259,10,7,High,4,3,22,8/6/2023,Develop and distribute staff guidelines for work-related project management procedures,Medium,16/7/2023,2,36
+Manoj Gupta,504,Male,40,Married,Backend Developer,"3,20,000",Senior,6,59,288,17,5,Moderate,1,0,19,22/8/2023,Develop a secure user registration and login system with third-party integrations,High,18/9/2023,3,24
+Nidhi Reddy,505,Female,55,Married,Backend Developer,"2,50,000",Senior,8,50,256,30,4,Low,3,1,45,9/7/2023,Design an E-commerce website to facilitate users with an intuitive and easy to use interface,High,30/10/2023,4,106
+Amit Kumar,506,Male,43,Married,Backend Developer,"3,50,000",Senior,2,55,216,18,3,Very Low,3,4,1,2/7/23,Design and implement a robust e-commerce system for scaling product sales,High,1/8/23,4,28
+Monik Gupta,507,Female,55,Married,HR,"1,60,000",Senior,6,53,210,22,4,High,2,2,30,6/1/24,Interview and select candidates for vacant positions ensuring they fit the job description,Low,13/1/24,2,2
+Amrita Mathur,508,Female,45,Married,HR,"1,70,000",Senior,8,16,281,15,10,High,3,2,13,6/12/23,Develop and maintain employee records,Medium,16/1/24,2,45
+Deepika Jain,509,Female,33,Married,HR,"180,000",Senior,6,32,278,11,8,Moderate,4,2,10,17/6/2023,Organizing seminars and lectures to update the workforce on the latest regulations and laws,Low,27/7/2023,2,36
+Shubham Gupta,510,Male,30,Married,Backend Developer,"2,30,000",Senior,0,48,219,8,9,High,1,1,42,14/11/2023,Implement the database logic while ensuring high performance and scalability,High,26/11/2023,4,7
+Amanjeet Yadav,511,Male,57,Married,Backend Developer,"3,50,000",Senior,8,59,281,20,8,High,2,6,73,4/2/2023,Develop a complex web application with advanced artificial intelligence features,High,21/4/2023,4,72
+Jatin Shukla,512,Male,43,Married,Backend Developer,"2,50,000",Senior,2,54,187,15,8,Very High,3,3,30,8/6/2023,Design a secure user registration and authentication system for websites,High,18/9/2023,4,96
+Neema Joshi,513,Female,34,Married,HR,"1,40,000",Senior,3,52,162,6,7,High,4,2,14,18/7/2023,Designing and managing employee onboarding and employee performance management systems,Low,25/7/2023,2,6
+Geetika Sharma,70,Female,34,Married,HR,"1,25,000",Senior,4,20,241,8,9,High,1,4,8,10/11/2023,Create educational initiatives to assist in employee growth & development,Medium,21/11/2023,2,14
+Neha Mehra,514,Female,27,Married,HR,"1,20,000",Senior,4,18,250,4,9,Moderate,3,3,15,15/9/2023,Arranging workshops for new employees and providing guidance on job responsibilities,Medium,2/11/22,2,318
+Vinay Shukla,515,Male,34,Married,Backend Developer,"2,50,000",Senior,2,49,172,10,9,High,2,2,40,22/11/2023,Create and optimize automated website testing pipelines to monitor for system performance issues,High,2/12/22,4,352
+Ali Hassan,516,Male,43,Married,HR,"1,80,000",Senior,6,66,203,19,7,High,4,4,15,21/9/2023,Create monthly reports for HR department highlighting key performance metrics,Medium,10/10/22,2,345
+Suraj Singh,517,Male,32,Married,Backend Developer,"3,25,000",Senior,2,47,178,8,9,High,1,1,45,6/10/2023,Develop an AI-assisted data entry system for extracting details from bank transfer slips,High,18/10/2023,4,8
+Kunjal Modi,518,Male,62,Married,Backend Developer,"3,00,000",Senior,3,58,145,18,10,Very High,2,9,68,24/7/2023,Develop a client-side rendering application to improve the user experience and speed,Medium,15/10/2023,4,84

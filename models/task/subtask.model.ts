@@ -9,6 +9,8 @@ interface SubtaskInterface extends Document {
     priority: number;
     document: string;
     userDocument: string;
+    startDate: Date;
+    predictedDeadline: Date;
 }
 
 const SubtaskSchema = new Schema<SubtaskInterface>(
@@ -44,6 +46,14 @@ const SubtaskSchema = new Schema<SubtaskInterface>(
         userDocument: {
             type: String,
             default: "",
+        },
+        startDate: {
+            type: Date,
+            default: new Date(),
+        },
+        predictedDeadline: {
+            type: Date,
+            default: new Date(),
         },
     },
     { timestamps: true }

@@ -1,6 +1,6 @@
 import { Schema, model, Document, Types } from "mongoose";
 
-interface TaskInterface extends Document {
+export interface TaskInterface extends Document {
     name: string;
     deadline: Date;
     childTasks: Array<Types.ObjectId>;

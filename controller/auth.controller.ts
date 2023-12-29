@@ -28,7 +28,7 @@ export const userLogin = async (req: any, res: any) => {
             {
                 email: userDetails.email,
             },
-            { email: userDetails.email, name: userDetails.name },
+            { email: userDetails.email },
             { new: true, upsert: true }
         );
 

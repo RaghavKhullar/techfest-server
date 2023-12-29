@@ -89,6 +89,7 @@ export const getAllProjects = async (req: any, res: any) => {
                         }
                     })
                 );
+
                 return {
                     name: project.name,
                     id: project._id,
@@ -229,7 +230,9 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                     }
                     return {
                         name: subTask.name,
-                        deadline: subTask.deadline,
+                        deadline: subTask.deadline || new Date(),
+                        predictedDeadline:
+                            subTask.predictedDeadline || new Date(),
                         id: subTask._id,
                         status: subTask.status || statusMap.TODO,
                         description: subTask.description || "",
@@ -237,7 +240,7 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                         priority: subTask.priority || priorityMap.LOW,
                         document: subTask.document || "",
                         userDocument: subTask.userDocument || "",
-                        creationTime: subTask._id.getTimestamp(),
+                        creationTime: subTask.startDate || new Date(),
                     };
                 }
             })
@@ -404,12 +407,14 @@ export const allocatedSubtasks = async (req: any, res: any) => {
                                 id: subTask._id,
                                 name: subTask.name,
                                 deadline: subTask.deadline || new Date(),
+                                predictedDeadline:
+                                    subTask.predictedDeadline || new Date(),
                                 priority: subTask.priority || priorityMap.LOW,
                                 status: subTask.status || statusMap.TODO,
                                 document: subTask.document || "",
                                 userDocument: subTask.userDocument || "",
                                 description: subTask.description || "",
-                                creationTime: subTask._id.getTimestamp(),
+                                creationTime: subTask.startDate,
                             };
                         }
                     }
@@ -471,7 +476,7 @@ export const calendarData = async (req: any, res: any) => {
                                 document: subTask.document || "",
                                 userDocument: subTask.userDocument || "",
                                 description: subTask.description || "",
-                                creationTime: subTask._id.getTimestamp(),
+                                creationTime: subTask.startDate,
                             };
                         }
                     }
@@ -483,7 +488,7 @@ export const calendarData = async (req: any, res: any) => {
         data.forEach((entry) => {
             if (entry) {
                 const year = entry.deadline.getFullYear();
-                const month = entry.deadline.getMonth() + 1;
+                const month = entry.deadline.getMonth();
                 if (map.has(year)) {
                     if (map.get(year).has(month)) {
                         map.get(year).get(month).push(entry);
@@ -496,7 +501,19 @@ export const calendarData = async (req: any, res: any) => {
                 }
             }
         });
-        return res.status(200).json({ data: map });
+        function mapToJson(map: any) {
+            let result = {};
+            map.forEach((value: any, key: any) => {
+                if (value instanceof Map) {
+                    value = mapToJson(value);
+                }
+                // @ts-ignore
+                result[key] = value;
+            });
+            return result;
+        }
+        const result = mapToJson(map);
+        return res.status(200).json({ data: result });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ message: "Internal server error" });
@@ -523,7 +540,13 @@ export const writeEmail = async (req: any, res: any) => {
             url: config.noteBookUrl + "/generate_email",
             data: { email_points: points },
         });
-        return res.status(200).json(response.data);
+        if (response.status == 200) {
+            return res.status(200).json(response.data.email);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
     } catch {
         console.log("error");
         return res.status(500).json({ message: "Internal server error" });
@@ -550,7 +573,13 @@ export const improveText = async (req: any, res: any) => {
             url: config.noteBookUrl + "/improve",
             data: { original_text: points },
         });
-        return res.status(200).json(response.data);
+        if (response.status == 200) {
+            return res.status(200).json(response.data.improved_text);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
     } catch {
         console.log("error");
         return res.status(500).json({ message: "Internal server error" });
@@ -577,7 +606,53 @@ export const summariseText = async (req: any, res: any) => {
             url: config.noteBookUrl + "/summarise",
             data: { text: points },
         });
-        return res.status(200).json(response.data);
+        if (response.status == 200) {
+            return res.status(200).json(response.data.summary);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const getReview = async (req: any, res: any) => {
+    try {
+        const user = await UserModel.findById(req.userId);
+        if (!user) {
+            return res
+                .cookie("token", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.id;
+        if (!isValidObjectId(points)) {
+            return res.status(400).json({ message: "Invalid params" });
+        }
+        const requestUser = await UserModel.findById(points);
+        if (!requestUser) {
+            return res.status(400).json({ message: "User not found;" });
+        }
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/get_employee_review",
+            data: { name: requestUser.name },
+        });
+        if (response.status == 200) {
+            return res.status(200).json(response.data.review);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
     } catch {
         console.log("error");
         return res.status(500).json({ message: "Internal server error" });

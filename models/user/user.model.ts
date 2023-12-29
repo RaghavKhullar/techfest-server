@@ -17,6 +17,9 @@ interface UserInterface extends Document {
     currentRating: number; // 0-10 (given by admin)
     moral: string; // given by admin
     stressBurnoutScore: number; // ML model
+    completedProjects: number;
+    projectsWithinDeadline: number;
+    projectsOngoing: number;
 }
 
 const genderMap = {
@@ -75,7 +78,7 @@ const UserSchema = new Schema<UserInterface>({
     },
     position: {
         type: String,
-        default: "Intern",
+        default: "Junior",
     },
     absences: {
         type: Number,
@@ -101,6 +104,18 @@ const UserSchema = new Schema<UserInterface>({
         type: Number,
         default: 0,
     }, // ML model
+    completedProjects: {
+        type: Number,
+        default: 0,
+    },
+    projectsWithinDeadline: {
+        type: Number,
+        default: 0,
+    },
+    projectsOngoing: {
+        type: Number,
+        default: 0,
+    },
 });
 
 const UserModel = model<UserInterface>("UserModel", UserSchema);

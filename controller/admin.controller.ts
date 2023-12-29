@@ -1,10 +1,16 @@
-import TaskModel, { priorityMap, statusMap } from "../models/task/task.model";
+import TaskModel, {
+    TaskInterface,
+    priorityMap,
+    statusMap,
+} from "../models/task/task.model";
 import AdminModel from "../models/user/admin.model";
 import AllowedUserModel from "../models/user/allowedUser.model";
 import UserModel from "../models/user/user.model";
 import ProjectModel from "../models/task/project.model";
 import SubtaskModel from "../models/task/subtask.model";
 import { isValidObjectId } from "mongoose";
+import axios from "axios";
+import config from "../config/config";
 
 const emailRegex = new RegExp(/^[a-zA-Z0-9._%+-]+@gmail\.com$/);
 
@@ -183,6 +189,7 @@ export const addTask = async (req: any, res: any) => {
             },
         });
         // Add api call for aws server for creating sub task
+        // await generateSubTasks(newTask);
         return res
             .status(200)
             .json({ data: newTask._id, message: "Task added successfully" });
@@ -234,6 +241,7 @@ export const addSubTask = async (req: any, res: any) => {
             description: description,
             priority: priority,
             document: fileName,
+            predictedDeadline: deadline,
         });
         await newSubTask.save();
         await TaskModel.findByIdAndUpdate(taskId, {
@@ -858,6 +866,8 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                     return {
                         name: subTask.name,
                         deadline: subTask.deadline || new Date(),
+                        predictedDeadline:
+                            subTask.predictedDeadline || new Date(),
                         id: subTask._id,
                         status: subTask.status || statusMap.TODO,
                         description: subTask.description || "",
@@ -865,7 +875,7 @@ export const getSubTasksOfTask = async (req: any, res: any) => {
                         priority: subTask.priority || priorityMap.LOW,
                         document: subTask.document || "",
                         userDocument: subTask.userDocument || "",
-                        creationTime: subTask._id.getTimestamp(),
+                        creationTime: subTask.startDate || new Date(),
                     };
                 }
             })
@@ -998,6 +1008,380 @@ export const fetchAllUsers = async (req: any, res: any) => {
         return res.status(200).json({ data: data });
     } catch (e) {
         console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const generateSubTasks = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const taskId = req.body.taskId;
+        if (!isValidObjectId(taskId)) {
+            return res.status(400).json({
+                message: "Invalid task found while generating subtasks",
+            });
+        }
+        const task = await TaskModel.findById(taskId);
+        if (!task) {
+            return res
+                .status(400)
+                .json({ message: "Task not found while generating subtasks" });
+        }
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/decompose_allocate_task",
+            data: { task: task.description },
+        });
+        if (response.status === 200) {
+            const allocations = response.data.allocations;
+            const subtaskIds = await Promise.all(
+                allocations.map(
+                    async (entry: {
+                        allotedUser: any;
+                        name: any;
+                        Description: any;
+                    }) => {
+                        const allotedUser = await UserModel.findOne({
+                            name: entry.allotedUser,
+                        });
+                        if (allotedUser) {
+                            const newSubTask = await SubtaskModel.create({
+                                name: entry.name,
+                                description: entry.Description,
+                                allotedUsers: allotedUser._id,
+                            });
+                            await newSubTask.save();
+                            await UserModel.findOneAndUpdate(
+                                { _id: allotedUser._id },
+                                {
+                                    $push: {
+                                        allotedTasks: newSubTask._id,
+                                    },
+                                    $inc: {
+                                        projectsOngoing: 1,
+                                    },
+                                }
+                            );
+                            await TaskModel.findByIdAndUpdate(taskId, {
+                                $addToSet: {
+                                    childTasks: newSubTask._id,
+                                },
+                            });
+                            return {
+                                subTaskId: newSubTask._id,
+                                userId: allotedUser._id,
+                            };
+                        }
+                    }
+                )
+            );
+            const data = subtaskIds.filter(
+                (val) => val != undefined && val != null
+            );
+            await Promise.all(
+                data.map(async (entry) => {
+                    await getStressScore(entry.userId);
+                    await getMoralScore(entry.userId);
+                    await predictCompletionTime(entry.userId, entry.subTaskId);
+                })
+            );
+            // await getEmployeeReview()
+        }
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+};
+
+const getEmployeeReview = async (id: String) => {
+    try {
+        if (!isValidObjectId(id)) {
+            console.error("Id is not a valid employee id");
+            return;
+        }
+        const user = await UserModel.findById(id);
+        if (!user) {
+            console.error("User not found");
+            return;
+        }
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/get_employee_review",
+            data: { name: user.name },
+        });
+        if (response.status === 200) {
+            console.log(response.data.review);
+        }
+        return;
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+};
+
+const getStressScore = async (id: String) => {
+    try {
+        if (!isValidObjectId(id)) {
+            console.error("Id is not a valid employee id");
+            return;
+        }
+        const user = await UserModel.findById(id);
+        if (!user) {
+            console.error("User not found");
+            return;
+        }
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/predict_stress_score",
+            data: { name: user.name },
+        });
+        if (response.status === 200) {
+            const score = response.data;
+            await UserModel.findByIdAndUpdate(id, {
+                stressBurnoutScore: parseInt(score),
+            });
+        }
+        return;
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+};
+
+const getMoralScore = async (id: String) => {
+    try {
+        if (!isValidObjectId(id)) {
+            console.error("Id is not a valid employee id");
+            return;
+        }
+        const user = await UserModel.findById(id);
+        if (!user) {
+            console.error("User not found");
+            return;
+        }
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/predict_moral_score",
+            data: { name: user.name },
+        });
+        if (response.status === 200) {
+            const score = response.data;
+            await UserModel.findByIdAndUpdate(id, { moral: score });
+        }
+        return;
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+};
+
+const predictCompletionTime = async (id: String, subTaskId: String) => {
+    try {
+        if (!isValidObjectId(id) || !isValidObjectId(subTaskId)) {
+            console.error("Id is not a valid subtask id");
+            return;
+        }
+        const subtask = await SubtaskModel.findById(subTaskId);
+        if (!subtask) {
+            console.error("Subtask not found");
+            return;
+        }
+        const user = await UserModel.findById(id);
+        if (!user) {
+            console.error("User not found");
+            return;
+        }
+
+        const data = {
+            "Employee Name": user.name,
+            Gender: user.gender,
+            Age: user.age,
+            Married: user.isMarried ? "Married" : "Bachelor",
+            Role: user.role,
+            Salary: user.salary,
+            Position: user.position,
+            Absences: user.absences,
+            Projects_Completed: user.completedProjects,
+            "Mean Monthly Hours": user.meanMonthlyHours,
+            "Years in the company": new Number(
+                (new Date().getTime() - new Date(user.joiningDate).getTime()) /
+                    31536000000
+            ).toFixed(0),
+            Joining_Year: new Date(user.joiningDate),
+            Current_Employ_Rating: user.currentRating,
+            Moral: user.moral,
+            "Stress & Burnout Score": user.stressBurnoutScore,
+            Ongoing_Project_Count: user.projectsOngoing,
+            Projects_Within_Deadline: user.projectsWithinDeadline,
+            Project_Description: subtask.description,
+            Project_Difficulty:
+                subtask.priority == priorityMap.LOW
+                    ? "Low"
+                    : subtask.priority == priorityMap.MEDIUM
+                      ? "Medium"
+                      : "High",
+            Project_Deadline: new Date(subtask.deadline || new Date()),
+        };
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/predict_completion_time",
+            data: { name: user.name, updated_record: data },
+        });
+        if (response.status === 200) {
+            const numberOfDays = parseInt(response.data);
+            const startDateTime = subtask.startDate;
+            const startDate = new Date(startDateTime);
+            const newDeadline = new Date(startDateTime);
+            newDeadline.setDate(startDate.getDate() + numberOfDays);
+            await SubtaskModel.findByIdAndUpdate(id, {
+                predictedDeadline: newDeadline,
+                deadline: newDeadline,
+            });
+        }
+        return;
+    } catch (e) {
+        console.error(e);
+        return;
+    }
+};
+
+export const generateChat = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.query;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/chat",
+            data: { query: points },
+        });
+        if (response.status == 200) {
+            return res.status(200).json(response.data.response);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const writeEmail = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.emailPoints;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/generate_email",
+            data: { email_points: points },
+        });
+        if (response.status == 200) {
+            return res.status(200).json(response.data.email);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const improveText = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+        const points = req.body.text;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/improve",
+            data: { original_text: points },
+        });
+        if (response.status == 200) {
+            return res.status(200).json(response.data.improved_text);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
+    } catch {
+        console.log("error");
+        return res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const summariseText = async (req: any, res: any) => {
+    try {
+        const admin = await AdminModel.findById(req.adminId);
+        if (!admin) {
+            return res
+                .cookie("idToken", "", {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: "none",
+                    path: "/",
+                })
+                .redirect(`${process.env.FRONTEND_URL}/login`);
+        }
+
+        const points = req.body.text;
+        const response = await axios({
+            method: "post",
+            url: config.noteBookUrl + "/summarise",
+            data: { text: points },
+        });
+        if (response.status == 200) {
+            return res.status(200).json(response.data.summary);
+        } else {
+            return res
+                .status(400)
+                .json({ message: "Error occured while generating" });
+        }
+    } catch {
+        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };

@@ -1,7 +1,11 @@
 import express from "express";
 const userRouter = express.Router();
 
-import { userLogout, userLogin } from "../controller/auth.controller";
+import {
+    userLogout,
+    userLogin,
+    getUserDetailsForReview,
+} from "../controller/auth.controller";
 import {
     allocatedSubtasks,
     calendarData,
@@ -48,6 +52,7 @@ userRouter.post("/writeEmail", authenticateUserToken, writeEmail);
 userRouter.post("/improveWriting", authenticateUserToken, improveText);
 userRouter.post("/summariseText", authenticateUserToken, summariseText);
 // userRouter.post("/generateChat", authenticateUserToken, generateChat);
-userRouter.post("/generateReview", authenticateUserToken, getReview);
+userRouter.post("/generateReview", getReview);
+userRouter.post("/getDetailsFinal", getUserDetailsForReview);
 
 export default userRouter;

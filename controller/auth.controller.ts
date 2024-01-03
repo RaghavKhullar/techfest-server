@@ -3,6 +3,7 @@ import AllowedUserModel from "../models/user/allowedUser.model";
 import UserModel from "../models/user/user.model";
 import { signToken } from "../utils/signToken";
 import { getTokensGoogle, getGoogleUser } from "../utils/googleAuthHandler";
+import { isValidObjectId } from "mongoose";
 
 export const userLogin = async (req: any, res: any) => {
     const code = req.query.code;
@@ -43,7 +44,7 @@ export const userLogin = async (req: any, res: any) => {
             }
         );
 
-        return res.redirect(`${process.env.FRONTEND_URL}/user/home`);
+        return res.redirect(`${process.env.FRONTEND_URL}/user/allotedSubtasks`);
     } catch (err: any) {
         return res.redirect(`${process.env.FRONTEND_URL}/login`);
     }
@@ -99,7 +100,7 @@ export const adminLogin = async (req: any, res: any) => {
                 path: "/",
             }
         );
-        return res.redirect(`${process.env.FRONTEND_URL}/admin/home`);
+        return res.redirect(`${process.env.FRONTEND_URL}/admin/viewProject`);
     } catch (err: any) {
         return res.redirect(`${process.env.FRONTEND_URL}/login`);
     }
@@ -115,4 +116,40 @@ export const adminLogout = (req: any, res: any) => {
         })
         .status(200)
         .json({ message: "Logged out" });
+};
+
+export const getUserDetailsForReview = async (req: any, res: any) => {
+    try {
+        const userId = req.body.userId;
+        if (!isValidObjectId(userId)) {
+            return res.status(400).json({ message: "Invalid params" });
+        }
+        const user = await UserModel.findById(userId);
+        if (!user) {
+            return res.status(400).json({ message: "User not found" });
+        }
+        return res.status(200).json({
+            data: {
+                id: user.id,
+                name: user.name,
+                image: user.image,
+                email: user.email,
+                role: user.role,
+                position: user.position,
+                gender: user.gender,
+                age: user.age,
+                isMarried: user.isMarried,
+                salary: user.salary,
+                absences: user.absences,
+                meanMonthlyHours: user.meanMonthlyHours,
+                joiningDate: user.joiningDate,
+                currentRating: user.currentRating,
+                moral: user.moral,
+                stressBurnoutScore: user.stressBurnoutScore,
+            },
+        });
+    } catch (e) {
+        console.error(e);
+        return res.status(500).json({ message: "Internal server error" });
+    }
 };

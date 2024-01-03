@@ -548,7 +548,6 @@ export const writeEmail = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -581,7 +580,6 @@ export const improveText = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -614,25 +612,12 @@ export const summariseText = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
 
 export const getReview = async (req: any, res: any) => {
     try {
-        const user = await UserModel.findById(req.userId);
-        if (!user) {
-            return res
-                .cookie("token", "", {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: "none",
-                    path: "/",
-                })
-                .redirect(`${process.env.FRONTEND_URL}/login`);
-        }
-
         const points = req.body.id;
         if (!isValidObjectId(points)) {
             return res.status(400).json({ message: "Invalid params" });
@@ -654,7 +639,6 @@ export const getReview = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };

@@ -289,7 +289,7 @@ const seeder = async () => {
     return;
 };
 
-seeder();
+// seeder();
 
 const dateEntries2 = [
     new Date("January 5, 2023"),
@@ -442,6 +442,31 @@ const seeder4 = async () => {
     );
     console.log(count);
 };
+const seeder5 = async () => {
+    connectDatabase(config.db, "mongodb://localhost:27017/");
 
+    const allSubtask = await SubtaskModel.find();
+    const n = allSubtask.length;
+    let count = 0;
+    await Promise.all(
+        allSubtask.map(async (subTask) => {
+            {
+                const randomStatus = Math.floor(Math.random() * 3);
+
+                const sub = await SubtaskModel.findByIdAndUpdate(subTask._id, {
+                    status:
+                        randomStatus == 0
+                            ? statusMap.COMPLETE
+                            : randomStatus == 1
+                              ? statusMap.TODO
+                              : statusMap.PROGRESS,
+                });
+                ++count;
+            }
+        })
+    );
+    console.log(count);
+};
+seeder5();
 // seeder4();
 // seeder3();

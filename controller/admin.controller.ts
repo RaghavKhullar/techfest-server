@@ -1,8 +1,4 @@
-import TaskModel, {
-    TaskInterface,
-    priorityMap,
-    statusMap,
-} from "../models/task/task.model";
+import TaskModel, { priorityMap, statusMap } from "../models/task/task.model";
 import AdminModel from "../models/user/admin.model";
 import AllowedUserModel from "../models/user/allowedUser.model";
 import UserModel from "../models/user/user.model";
@@ -1103,32 +1099,6 @@ export const generateSubTasks = async (req: any, res: any) => {
     }
 };
 
-const getEmployeeReview = async (id: String) => {
-    try {
-        if (!isValidObjectId(id)) {
-            console.error("Id is not a valid employee id");
-            return;
-        }
-        const user = await UserModel.findById(id);
-        if (!user) {
-            console.error("User not found");
-            return;
-        }
-        const response = await axios({
-            method: "post",
-            url: config.noteBookUrl + "/get_employee_review",
-            data: { name: user.name },
-        });
-        if (response.status === 200) {
-            console.log(response.data.review);
-        }
-        return;
-    } catch (e) {
-        console.error(e);
-        return;
-    }
-};
-
 const getStressScore = async (id: String) => {
     try {
         if (!isValidObjectId(id)) {
@@ -1235,18 +1205,24 @@ const predictCompletionTime = async (id: String, subTaskId: String) => {
         const response = await axios({
             method: "post",
             url: config.noteBookUrl + "/predict_completion_time",
-            data: { name: user.name, updated_record: data },
+            data: { name: user.name, data: data },
         });
         if (response.status === 200) {
             const numberOfDays = parseInt(response.data);
             const startDateTime = subtask.startDate;
             const startDate = new Date(startDateTime);
-            const newDeadline = new Date(startDateTime);
-            newDeadline.setDate(startDate.getDate() + numberOfDays);
-            await SubtaskModel.findByIdAndUpdate(id, {
-                predictedDeadline: newDeadline,
-                deadline: newDeadline,
-            });
+            const newDeadline = new Date(startDate);
+            newDeadline.setDate(newDeadline.getDate() + numberOfDays);
+            const x = await SubtaskModel.findByIdAndUpdate(
+                subTaskId,
+                {
+                    predictedDeadline: new Date(
+                        newDeadline.toISOString().split("T")[0]
+                    ),
+                    deadline: newDeadline,
+                },
+                { new: true }
+            );
         }
         return;
     } catch (e) {
@@ -1283,7 +1259,6 @@ export const generateChat = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -1316,7 +1291,6 @@ export const writeEmail = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -1348,7 +1322,6 @@ export const improveText = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
@@ -1381,7 +1354,6 @@ export const summariseText = async (req: any, res: any) => {
                 .json({ message: "Error occured while generating" });
         }
     } catch {
-        console.log("error");
         return res.status(500).json({ message: "Internal server error" });
     }
 };
